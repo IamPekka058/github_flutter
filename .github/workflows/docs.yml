@@ -2,14 +2,10 @@ name: Generate and Deploy Docs
 
 on:
   push:
-  pull_request:
-    types:
-      - closed
   workflow_dispatch:
 
 jobs:
   generate-and-deploy-docs:
-    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == t
     runs-on: ubuntu-latest
 
     steps:
