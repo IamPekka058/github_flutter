@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:github/github.dart';
+import 'package:github_flutter/github.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
 import 'package:test/test.dart';
@@ -71,7 +71,9 @@ void main() {
       final organizationsService = OrganizationsService(github);
 
       final team = await organizationsService.getTeamByName(
-          'flutter', 'flutter-hackers');
+        'flutter',
+        'flutter-hackers',
+      );
       expect(team.name, 'flutter-hackers');
       expect(team.id, 1753404);
       expect(team.organization!.login, 'flutter');
@@ -86,8 +88,11 @@ void main() {
 
       final client = MockClient((r) async {
         request = r;
-        return Response(teamNotFoundResponse, HttpStatus.notFound,
-            headers: headers);
+        return Response(
+          teamNotFoundResponse,
+          HttpStatus.notFound,
+          headers: headers,
+        );
       });
 
       final github = GitHub(client: client);
@@ -95,9 +100,12 @@ void main() {
 
       // ignore: omit_local_variable_types
       expect(
-          () async => organizationsService.getTeamByName(
-              'flutter', 'flutter-programmers'),
-          throwsException);
+        () async => organizationsService.getTeamByName(
+          'flutter',
+          'flutter-programmers',
+        ),
+        throwsException,
+      );
       expect(request, isNull);
     });
 
@@ -112,12 +120,12 @@ void main() {
       final github = GitHub(client: client);
       final organizationsService = OrganizationsService(github);
 
-      final teamMembershipState =
-          await organizationsService.getTeamMembershipByName(
-        'flutter',
-        'flutter-hackers',
-        'ricardoamador',
-      );
+      final teamMembershipState = await organizationsService
+          .getTeamMembershipByName(
+            'flutter',
+            'flutter-hackers',
+            'ricardoamador',
+          );
       expect(teamMembershipState.isActive, isTrue);
       expect(request, isNotNull);
     });
@@ -133,12 +141,12 @@ void main() {
       final github = GitHub(client: client);
       final organizationsService = OrganizationsService(github);
 
-      final teamMembershipState =
-          await organizationsService.getTeamMembershipByName(
-        'flutter',
-        'flutter-hackers',
-        'ricardoamador',
-      );
+      final teamMembershipState = await organizationsService
+          .getTeamMembershipByName(
+            'flutter',
+            'flutter-hackers',
+            'ricardoamador',
+          );
       expect(teamMembershipState.isActive, isFalse);
       expect(teamMembershipState.isPending, isTrue);
       expect(request, isNotNull);
@@ -163,12 +171,13 @@ void main() {
       final organizationsService = OrganizationsService(github);
 
       expect(
-          () async => organizationsService.getTeamMembershipByName(
-                'flutter',
-                'flutter-hackers',
-                'garfield',
-              ),
-          throwsException);
+        () async => organizationsService.getTeamMembershipByName(
+          'flutter',
+          'flutter-hackers',
+          'garfield',
+        ),
+        throwsException,
+      );
       expect(request, isNull);
     });
   });

@@ -1,4 +1,4 @@
-import 'package:github/src/common.dart';
+import 'package:github_flutter/src/common.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
 import 'package:test/test.dart';
@@ -33,17 +33,18 @@ void main() {
       );
       return Response(listCommits, StatusCodes.OK);
     });
-    final commits = await repositories
-        .listCommits(
-          slug,
-          sha: 'abc',
-          path: '/path',
-          author: 'octocat',
-          committer: 'octodog',
-          since: DateTime(2022, 2, 22),
-          until: DateTime(2023, 2, 22),
-        )
-        .toList();
+    final commits =
+        await repositories
+            .listCommits(
+              slug,
+              sha: 'abc',
+              path: '/path',
+              author: 'octocat',
+              committer: 'octodog',
+              since: DateTime(2022, 2, 22),
+              until: DateTime(2023, 2, 22),
+            )
+            .toList();
     expect(commits, hasLength(1));
   });
 }

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:github/github.dart';
+import 'package:github_flutter/github.dart';
 import 'package:test/test.dart';
 
 const _licenseJson = r'''  {

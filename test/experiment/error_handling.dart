@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:github/github.dart';
+import 'package:github_flutter/github.dart';
 
 import '../helper/http.dart';
 
@@ -10,12 +10,8 @@ void main() {
     GitHubJson.encode(<String, dynamic>{
       'message': 'Invalid Entity',
       'errors': [
-        {
-          'resource': 'Issue',
-          'field': 'body',
-          'code': 'not_found',
-        }
-      ]
+        {'resource': 'Issue', 'field': 'body', 'code': 'not_found'},
+      ],
     }),
     {},
     422,

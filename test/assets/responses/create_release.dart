@@ -4,5 +4,5 @@ const Map<String, dynamic> createReleasePayload = {
   'name': 'v1.0.0',
   'body': 'Description of the release',
   'draft': false,
-  'prerelease': false
+  'prerelease': false,
 };

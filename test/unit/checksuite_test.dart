@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:github/src/common/model/checks.dart';
+import 'package:github_flutter/src/models/checks.dart';
 import 'package:test/test.dart';
 
 /// The checkSuite Json is composed from multiple GitHub examples
