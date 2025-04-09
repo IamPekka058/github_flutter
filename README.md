@@ -1,5 +1,5 @@
 # github_flutter
-[![Dart & Flutter CI](https://github.com/IamPekka058/github_flutter/actions/workflows/dart.yml/badge.svg?branch=main)](https://github.com/IamPekka058/github_flutter/actions/workflows/dart.yml)
+[![Dart & Flutter CI](https://github.com/IamPekka058/github_flutter/actions/workflows/dart.yml/badge.svg)](https://github.com/IamPekka058/github_flutter/actions/workflows/dart.yml)
 
 
 This is a lightweight library based on ![Github.dart](https://github.com/SpinlockLabs/github.dart/) for interacting with GitHub in Dart. It works on following platforms:
