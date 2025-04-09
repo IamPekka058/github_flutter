@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:github/src/common.dart';
+import 'package:github_flutter/src/common.dart';
 
 /// The [SearchService] handles communication with search related methods of
 /// the GitHub API.
@@ -25,30 +25,35 @@ class SearchService extends Service {
     var isFirst = true;
 
     PaginationHelper(github)
-        .fetchStreamed('GET', '/search/repositories',
-            params: params, pages: pages)
+        .fetchStreamed(
+          'GET',
+          '/search/repositories',
+          params: params,
+          pages: pages,
+        )
         .listen((response) {
-      if (response.statusCode == 403 &&
-          response.body.contains('rate limit') &&
-          isFirst) {
-        throw RateLimitHit(github);
-      }
+          if (response.statusCode == 403 &&
+              response.body.contains('rate limit') &&
+              isFirst) {
+            throw RateLimitHit(github);
+          }
 
-      isFirst = false;
+          isFirst = false;
 
-      final input = jsonDecode(response.body);
+          final input = jsonDecode(response.body);
 
-      if (input['items'] == null) {
-        return;
-      }
+          if (input['items'] == null) {
+            return;
+          }
 
-      final items = input['items'] as List;
+          final items = input['items'] as List;
 
-      items
-          .cast<Map<String, dynamic>>()
-          .map(Repository.fromJson)
-          .forEach(controller.add);
-    }).onDone(controller.close);
+          items
+              .cast<Map<String, dynamic>>()
+              .map(Repository.fromJson)
+              .forEach(controller.add);
+        })
+        .onDone(controller.close);
 
     return controller.stream;
   }
@@ -146,27 +151,28 @@ class SearchService extends Service {
     PaginationHelper(github)
         .fetchStreamed('GET', '/search/issues', params: params, pages: pages)
         .listen((response) {
-      if (response.statusCode == 403 &&
-          response.body.contains('rate limit') &&
-          isFirst) {
-        throw RateLimitHit(github);
-      }
+          if (response.statusCode == 403 &&
+              response.body.contains('rate limit') &&
+              isFirst) {
+            throw RateLimitHit(github);
+          }
 
-      isFirst = false;
+          isFirst = false;
 
-      final input = jsonDecode(response.body);
+          final input = jsonDecode(response.body);
 
-      if (input['items'] == null) {
-        return;
-      }
+          if (input['items'] == null) {
+            return;
+          }
 
-      final items = input['items'] as List;
+          final items = input['items'] as List;
 
-      items
-          .cast<Map<String, dynamic>>()
-          .map(Issue.fromJson)
-          .forEach(controller.add);
-    }).onDone(controller.close);
+          items
+              .cast<Map<String, dynamic>>()
+              .map(Issue.fromJson)
+              .forEach(controller.add);
+        })
+        .onDone(controller.close);
 
     return controller.stream;
   }
@@ -196,27 +202,28 @@ class SearchService extends Service {
     PaginationHelper(github)
         .fetchStreamed('GET', '/search/users', params: params, pages: pages)
         .listen((response) {
-      if (response.statusCode == 403 &&
-          response.body.contains('rate limit') &&
-          isFirst) {
-        throw RateLimitHit(github);
-      }
+          if (response.statusCode == 403 &&
+              response.body.contains('rate limit') &&
+              isFirst) {
+            throw RateLimitHit(github);
+          }
 
-      isFirst = false;
+          isFirst = false;
 
-      final input = jsonDecode(response.body);
+          final input = jsonDecode(response.body);
 
-      if (input['items'] == null) {
-        return;
-      }
+          if (input['items'] == null) {
+            return;
+          }
 
-      final items = input['items'] as List;
+          final items = input['items'] as List;
 
-      items
-          .cast<Map<String, dynamic>>()
-          .map(User.fromJson)
-          .forEach(controller.add);
-    }).onDone(controller.close);
+          items
+              .cast<Map<String, dynamic>>()
+              .map(User.fromJson)
+              .forEach(controller.add);
+        })
+        .onDone(controller.close);
 
     return controller.stream;
   }

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:github/github.dart';
+import 'package:github_flutter/github.dart';
 
 const _previewHeader = 'application/vnd.github.antiope-preview+json';
 
@@ -19,8 +19,8 @@ class ChecksService extends Service {
   final CheckSuitesService checkSuites;
 
   ChecksService(super.github)
-      : checkRuns = CheckRunsService._(github),
-        checkSuites = CheckSuitesService._(github);
+    : checkRuns = CheckRunsService._(github),
+      checkSuites = CheckSuitesService._(github);
 }
 
 class CheckRunsService extends Service {
@@ -58,25 +58,29 @@ class CheckRunsService extends Service {
     CheckRunOutput? output,
     List<CheckRunAction>? actions,
   }) async {
-    assert(conclusion != null ||
-        (completedAt == null && status != CheckRunStatus.completed));
+    assert(
+      conclusion != null ||
+          (completedAt == null && status != CheckRunStatus.completed),
+    );
     assert(actions == null || actions.length <= 3);
     return github.postJSON<Map<String, dynamic>, CheckRun>(
       '/repos/${slug.fullName}/check-runs',
       statusCode: StatusCodes.CREATED,
       preview: _previewHeader,
-      body: jsonEncode(createNonNullMap(<String, dynamic>{
-        'name': name,
-        'head_sha': headSha,
-        'details_url': detailsUrl,
-        'external_id': externalId,
-        'status': status,
-        'started_at': dateToGitHubIso8601(startedAt),
-        'conclusion': conclusion,
-        'completed_at': dateToGitHubIso8601(completedAt),
-        'output': output,
-        'actions': actions,
-      })),
+      body: jsonEncode(
+        createNonNullMap(<String, dynamic>{
+          'name': name,
+          'head_sha': headSha,
+          'details_url': detailsUrl,
+          'external_id': externalId,
+          'status': status,
+          'started_at': dateToGitHubIso8601(startedAt),
+          'conclusion': conclusion,
+          'completed_at': dateToGitHubIso8601(completedAt),
+          'output': output,
+          'actions': actions,
+        }),
+      ),
       convert: CheckRun.fromJson,
     );
   }
@@ -109,25 +113,29 @@ class CheckRunsService extends Service {
     CheckRunOutput? output,
     List<CheckRunAction>? actions,
   }) async {
-    assert(conclusion != null ||
-        (completedAt == null && status != CheckRunStatus.completed));
+    assert(
+      conclusion != null ||
+          (completedAt == null && status != CheckRunStatus.completed),
+    );
     assert(actions == null || actions.length <= 3);
     return github.requestJson<Map<String, dynamic>, CheckRun>(
       'PATCH',
       '/repos/${slug.fullName}/check-runs/${checkRunToUpdate.id}',
       statusCode: StatusCodes.OK,
       preview: _previewHeader,
-      body: jsonEncode(createNonNullMap(<String, dynamic>{
-        'name': name,
-        'details_url': detailsUrl,
-        'external_id': externalId,
-        'started_at': dateToGitHubIso8601(startedAt),
-        'status': status,
-        'conclusion': conclusion,
-        'completed_at': dateToGitHubIso8601(completedAt),
-        'output': output,
-        'actions': actions,
-      })),
+      body: jsonEncode(
+        createNonNullMap(<String, dynamic>{
+          'name': name,
+          'details_url': detailsUrl,
+          'external_id': externalId,
+          'started_at': dateToGitHubIso8601(startedAt),
+          'status': status,
+          'conclusion': conclusion,
+          'completed_at': dateToGitHubIso8601(completedAt),
+          'output': output,
+          'actions': actions,
+        }),
+      ),
       convert: CheckRun.fromJson,
     );
   }
@@ -200,10 +208,7 @@ class CheckRunsService extends Service {
   /// OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
   ///
   /// API docs: https://developer.github.com/v3/checks/runs/#get-a-single-check-run
-  Future<CheckRun> getCheckRun(
-    RepositorySlug slug, {
-    required int checkRunId,
-  }) {
+  Future<CheckRun> getCheckRun(RepositorySlug slug, {required int checkRunId}) {
     ArgumentError.checkNotNull(checkRunId);
     return github.getJSON<Map<String, dynamic>, CheckRun>(
       'repos/${slug.fullName}/check-runs/$checkRunId',
@@ -222,8 +227,9 @@ class CheckRunsService extends Service {
     RepositorySlug slug, {
     required CheckRun checkRun,
   }) {
-    return PaginationHelper(github)
-        .objects<Map<String, dynamic>, CheckRunAnnotation>(
+    return PaginationHelper(
+      github,
+    ).objects<Map<String, dynamic>, CheckRunAnnotation>(
       'GET',
       '/repos/${slug.fullName}/check-runs/${checkRun.id}/annotations',
       CheckRunAnnotation.fromJSON,
@@ -275,10 +281,7 @@ class CheckSuitesService extends Service {
       'repos/$slug/commits/$ref/check-suites',
       CheckSuite.fromJson,
       preview: _previewHeader,
-      params: createNonNullMap({
-        'app_id': appId,
-        'check_name': checkName,
-      }),
+      params: createNonNullMap({'app_id': appId, 'check_name': checkName}),
       statusCode: StatusCodes.OK,
       arrayKey: 'check_suites',
     );
@@ -302,10 +305,12 @@ class CheckSuitesService extends Service {
       statusCode: StatusCodes.OK,
       preview: _previewHeader,
       body: {'auto_trigger_checks': autoTriggerChecks},
-      convert: (input) => (input['preferences']['auto_trigger_checks'] as List)
-          .cast<Map<String, dynamic>>()
-          .map(AutoTriggerChecks.fromJson)
-          .toList(),
+      convert:
+          (input) =>
+              (input['preferences']['auto_trigger_checks'] as List)
+                  .cast<Map<String, dynamic>>()
+                  .map(AutoTriggerChecks.fromJson)
+                  .toList(),
     );
   }
 

@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'package:github/src/common.dart';
+
+import 'package:github_flutter/src/common.dart';
 
 /// The [UrlShortenerService] provides a handy method to access GitHub's
 /// url shortener.
@@ -19,9 +20,9 @@ class UrlShortenerService extends Service {
       params['code'] = code;
     }
 
-    return github
-        .request('POST', 'http://git.io/', params: params)
-        .then((response) {
+    return github.request('POST', 'http://git.io/', params: params).then((
+      response,
+    ) {
       if (response.statusCode != StatusCodes.CREATED) {
         throw GitHubError(github, 'Failed to create shortened url!');
       }

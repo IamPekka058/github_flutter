@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:github/src/common.dart';
+import 'package:github_flutter/src/common.dart';
 import 'package:http/http.dart' as http;
 
 /// The [UsersService] handles communication with user related methods of the
@@ -19,14 +19,15 @@ class UsersService extends Service {
   /// Updates the Current User.
   ///
   /// API docs: https://developer.github.com/v3/users/#update-the-authenticated-user
-  Future<CurrentUser> editCurrentUser(
-      {String? name,
-      String? email,
-      String? blog,
-      String? company,
-      String? location,
-      bool? hireable,
-      String? bio}) {
+  Future<CurrentUser> editCurrentUser({
+    String? name,
+    String? email,
+    String? blog,
+    String? company,
+    String? location,
+    bool? hireable,
+    String? bio,
+  }) {
     final map = createNonNullMap(<String, dynamic>{
       'name': name,
       'email': email,
@@ -34,7 +35,7 @@ class UsersService extends Service {
       'company': company,
       'location': location,
       'hireable': hireable,
-      'bio': bio
+      'bio': bio,
     });
 
     return github.postJSON(
@@ -58,13 +59,16 @@ class UsersService extends Service {
   /// Throws [AccessForbidden] if we are not authenticated.
   ///
   /// API docs: https://developer.github.com/v3/users/#get-the-authenticated-user
-  Future<CurrentUser> getCurrentUser() =>
-      github.getJSON('/user', statusCode: StatusCodes.OK,
-          fail: (http.Response response) {
-        if (response.statusCode == StatusCodes.FORBIDDEN) {
-          throw AccessForbidden(github);
-        }
-      }, convert: CurrentUser.fromJson);
+  Future<CurrentUser> getCurrentUser() => github.getJSON(
+    '/user',
+    statusCode: StatusCodes.OK,
+    fail: (http.Response response) {
+      if (response.statusCode == StatusCodes.FORBIDDEN) {
+        throw AccessForbidden(github);
+      }
+    },
+    convert: CurrentUser.fromJson,
+  );
 
   /// Checks if a user exists.
   Future<bool> isUser(String name) => github
@@ -77,35 +81,51 @@ class UsersService extends Service {
   ///
   /// API docs: https://developer.github.com/v3/users/#get-all-users
   Stream<User> listUsers({int? pages, int? since}) =>
-      PaginationHelper(github).objects('GET', '/users', User.fromJson,
-          pages: pages, params: {'since': since});
+      PaginationHelper(github).objects(
+        'GET',
+        '/users',
+        User.fromJson,
+        pages: pages,
+        params: {'since': since},
+      );
 
   /// Lists all email addresses for the currently authenticated user.
   ///
   /// API docs: https://developer.github.com/v3/users/emails/#list-email-addresses-for-a-user
-  Stream<UserEmail> listEmails() => PaginationHelper(github)
-      .objects('GET', '/user/emails', UserEmail.fromJson);
+  Stream<UserEmail> listEmails() => PaginationHelper(
+    github,
+  ).objects('GET', '/user/emails', UserEmail.fromJson);
 
   /// Add Emails
   ///
   /// API docs: https://developer.github.com/v3/users/emails/#add-email-addresses
-  Stream<UserEmail> addEmails(List<String> emails) => PaginationHelper(github)
-      .objects('POST', '/user/emails', UserEmail.fromJson,
-          statusCode: 201, body: GitHubJson.encode(emails));
+  Stream<UserEmail> addEmails(List<String> emails) =>
+      PaginationHelper(github).objects(
+        'POST',
+        '/user/emails',
+        UserEmail.fromJson,
+        statusCode: 201,
+        body: GitHubJson.encode(emails),
+      );
 
   /// Delete Emails
   ///
   /// API docs: https://developer.github.com/v3/users/emails/#delete-email-addresses
   Future<bool> deleteEmails(List<String> emails) => github
-      .request('DELETE', '/user/emails',
-          body: GitHubJson.encode(emails), statusCode: 204)
+      .request(
+        'DELETE',
+        '/user/emails',
+        body: GitHubJson.encode(emails),
+        statusCode: 204,
+      )
       .then((x) => x.statusCode == 204);
 
   /// List user followers.
   ///
   /// API docs: https://developer.github.com/v3/users/followers/#list-followers-of-a-user
-  Stream<User> listUserFollowers(String user) => PaginationHelper(github)
-      .objects('GET', '/users/$user/followers', User.fromJson, statusCode: 200);
+  Stream<User> listUserFollowers(String user) => PaginationHelper(
+    github,
+  ).objects('GET', '/users/$user/followers', User.fromJson, statusCode: 200);
 
   /// Check if the current user is following the specified user.
   Future<bool> isFollowingUser(String user) =>
@@ -123,11 +143,11 @@ class UsersService extends Service {
   ///
   /// https://developer.github.com/v3/users/followers/#follow-a-user
   Future<bool> followUser(String user) {
-    return github
-        .request('PUT', '/user/following/$user', statusCode: 204)
-        .then((response) {
-      return response.statusCode == 204;
-    });
+    return github.request('PUT', '/user/following/$user', statusCode: 204).then(
+      (response) {
+        return response.statusCode == 204;
+      },
+    );
   }
 
   /// Unfollows a user.
@@ -135,21 +155,23 @@ class UsersService extends Service {
     return github
         .request('DELETE', '/user/following/$user', statusCode: 204)
         .then((response) {
-      return response.statusCode == 204;
-    });
+          return response.statusCode == 204;
+        });
   }
 
   /// List current user followers.
   ///
   /// API docs: https://developer.github.com/v3/users/followers/#list-followers-of-a-user
-  Stream<User> listCurrentUserFollowers() => PaginationHelper(github)
-      .objects('GET', '/user/followers', User.fromJson, statusCode: 200);
+  Stream<User> listCurrentUserFollowers() => PaginationHelper(
+    github,
+  ).objects('GET', '/user/followers', User.fromJson, statusCode: 200);
 
   /// List current user following
   ///
   /// API docs: https://developer.github.com/v3/users/followers/#list-users-followed-by-the-authenticated-user
-  Stream<User> listCurrentUserFollowing() => PaginationHelper(github)
-      .objects('GET', '/user/following', User.fromJson, statusCode: 200);
+  Stream<User> listCurrentUserFollowing() => PaginationHelper(
+    github,
+  ).objects('GET', '/user/following', User.fromJson, statusCode: 200);
 
   /// Lists the verified public keys for a [userLogin]. If no [userLogin] is specified,
   /// the public keys for the authenticated user are fetched.
