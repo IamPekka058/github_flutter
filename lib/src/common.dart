@@ -11,8 +11,6 @@ export 'package:github_flutter/src/common/util/oauth2.dart';
 export 'package:github_flutter/src/common/util/pagination.dart';
 export 'package:github_flutter/src/common/util/service.dart';
 export 'package:github_flutter/src/common/util/utils.dart';
-export 'package:github_flutter/src/const/language_color.dart';
-export 'package:github_flutter/src/const/token_env_keys.dart';
 export 'package:github_flutter/src/models/activity.dart';
 export 'package:github_flutter/src/models/authorizations.dart';
 export 'package:github_flutter/src/models/checks.dart';
