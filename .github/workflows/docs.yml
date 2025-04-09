@@ -11,17 +11,17 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Set up Dart environment
-      - name: Setup Dart
-        uses: dart-lang/setup-dart@v1
+      # Install Flutter
+      - uses: subosito/flutter-action@v2
         with:
-          sdk: stable
+          channel: stable
+          cache: true
 
       # Install dependencies
       - name: Install dependencies
-        run: dart pub get
+        run: flutter pub get
 
       # Generate documentation
       - name: Generate documentation
