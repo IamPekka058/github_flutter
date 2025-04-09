@@ -1,4 +1,4 @@
-import 'package:github/src/common/model/repos_releases.dart';
+import 'package:github_flutter/src/models/repos_releases.dart';
 import 'package:test/test.dart';
 
 import '../../../assets/responses/create_release.dart';
@@ -31,7 +31,9 @@ void main() {
   group('CreateRelease', () {
     test('fromJson', () {
       expect(
-          () => CreateRelease.fromJson(createReleasePayload), returnsNormally);
+        () => CreateRelease.fromJson(createReleasePayload),
+        returnsNormally,
+      );
     });
 
     test('toJson', () {
@@ -41,11 +43,12 @@ void main() {
 
     test('toJson reserializes back to the same type of object', () {
       final createRelease = CreateRelease.from(
-          tagName: 'v1.0.0',
-          name: 'Initial Release',
-          targetCommitish: 'master',
-          isDraft: false,
-          isPrerelease: true);
+        tagName: 'v1.0.0',
+        name: 'Initial Release',
+        targetCommitish: 'master',
+        isDraft: false,
+        isPrerelease: true,
+      );
       final json = createRelease.toJson();
 
       expect(CreateRelease.fromJson(json), createRelease);

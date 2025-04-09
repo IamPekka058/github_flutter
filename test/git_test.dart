@@ -1,4 +1,4 @@
-import 'package:github/github.dart';
+import 'package:github_flutter/github.dart';
 import 'package:nock/nock.dart';
 import 'package:test/test.dart';
 
@@ -9,9 +9,11 @@ const date = '2014-10-02T15:21:29Z';
 
 GitHub createGithub() {
   return GitHub(
-      endpoint: fakeApiUrl,
-      auth: const Authentication.withToken(
-          '0000000000000000000000000000000000000001'));
+    endpoint: fakeApiUrl,
+    auth: const Authentication.withToken(
+      '0000000000000000000000000000000000000001',
+    ),
+  );
 }
 
 void main() {
@@ -47,33 +49,36 @@ void main() {
   });
 
   test('getCommit()', () async {
-    nock(fakeApiUrl)
-        .get('/repos/o/n/git/commits/sh')
-        .reply(200, nocked.getCommit);
+    nock(
+      fakeApiUrl,
+    ).get('/repos/o/n/git/commits/sh').reply(200, nocked.getCommit);
     var commit = await git.getCommit(repo, 'sh');
     expect(commit.sha, '7638417db6d59f3c431d3e1f261cc637155684cd');
   });
 
   test('createCommit()', () async {
     nock(fakeApiUrl)
-        .post('/repos/o/n/git/commits',
-            '{"message":"aMessage","tree":"aTreeSha","parents":["parentSha1","parentSha2"],"committer":{"name":"cName","email":"cEmail","date":"2014-10-02T15:21:29Z"},"author":{"name":"aName","email":"aEmail","date":"2014-10-02T15:21:29Z"}}')
+        .post(
+          '/repos/o/n/git/commits',
+          '{"message":"aMessage","tree":"aTreeSha","parents":["parentSha1","parentSha2"],"committer":{"name":"cName","email":"cEmail","date":"2014-10-02T15:21:29Z"},"author":{"name":"aName","email":"aEmail","date":"2014-10-02T15:21:29Z"}}',
+        )
         .reply(201, nocked.createCommit);
 
     var commit = await git.createCommit(
-        repo,
-        CreateGitCommit('aMessage', 'aTreeSha')
-          ..parents = ['parentSha1', 'parentSha2']
-          ..committer = GitCommitUser('cName', 'cEmail', DateTime.parse(date))
-          ..author = GitCommitUser('aName', 'aEmail', DateTime.parse(date)));
+      repo,
+      CreateGitCommit('aMessage', 'aTreeSha')
+        ..parents = ['parentSha1', 'parentSha2']
+        ..committer = GitCommitUser('cName', 'cEmail', DateTime.parse(date))
+        ..author = GitCommitUser('aName', 'aEmail', DateTime.parse(date)),
+    );
     expect(commit.message, 'aMessage');
     expect(commit.tree!.sha, 'aTreeSha');
   });
 
   test('getReference()', () async {
-    nock(fakeApiUrl)
-        .get('/repos/o/n/git/refs/heads/b')
-        .reply(200, nocked.getReference);
+    nock(
+      fakeApiUrl,
+    ).get('/repos/o/n/git/refs/heads/b').reply(200, nocked.getReference);
     var ref = await git.getReference(repo, 'heads/b');
     expect(ref.ref, 'refs/heads/b');
   });
@@ -101,25 +106,31 @@ void main() {
   });
 
   test('getTag()', () async {
-    nock(fakeApiUrl)
-        .get('/repos/o/n/git/tags/someSHA')
-        .reply(200, nocked.getTag);
+    nock(
+      fakeApiUrl,
+    ).get('/repos/o/n/git/tags/someSHA').reply(200, nocked.getTag);
     await git.getTag(repo, someSha);
   });
 
   test('createTag()', () async {
     nock(fakeApiUrl)
-        .post('/repos/o/n/git/tags',
-            '{"tag":"v0.0.1","message":"initial version","object":"someSHA","type":"commit","tagger":{"name":"Monalisa Octocat","email":"octocat@github.com","date":"$date"}}')
+        .post(
+          '/repos/o/n/git/tags',
+          '{"tag":"v0.0.1","message":"initial version","object":"someSHA","type":"commit","tagger":{"name":"Monalisa Octocat","email":"octocat@github.com","date":"$date"}}',
+        )
         .reply(201, nocked.createTag);
 
     final createGitTag = CreateGitTag(
-        'v0.0.1',
-        'initial version',
-        someSha,
-        'commit',
-        GitCommitUser(
-            'Monalisa Octocat', 'octocat@github.com', DateTime.parse(date)));
+      'v0.0.1',
+      'initial version',
+      someSha,
+      'commit',
+      GitCommitUser(
+        'Monalisa Octocat',
+        'octocat@github.com',
+        DateTime.parse(date),
+      ),
+    );
 
     var tag = await git.createTag(repo, createGitTag);
 
@@ -129,21 +140,27 @@ void main() {
   });
 
   test('getTree()', () async {
-    nock(fakeApiUrl)
-        .get('/repos/o/n/git/trees/sh?recursive=1')
-        .reply(200, '{}');
+    nock(
+      fakeApiUrl,
+    ).get('/repos/o/n/git/trees/sh?recursive=1').reply(200, '{}');
     await git.getTree(repo, 'sh', recursive: true);
   });
 
   test('createTree()', () async {
     nock(fakeApiUrl)
-        .post('/repos/o/n/git/trees',
-            '{"tree":[{"path":"file.rb","mode":"100644","type":"blob","sha":"44b4fc6d56897b048c772eb4087f854f46256132"}]}')
+        .post(
+          '/repos/o/n/git/trees',
+          '{"tree":[{"path":"file.rb","mode":"100644","type":"blob","sha":"44b4fc6d56897b048c772eb4087f854f46256132"}]}',
+        )
         .reply(201, nocked.createTree);
 
     var createTree = CreateGitTree([
-      CreateGitTreeEntry('file.rb', '100644', 'blob',
-          sha: '44b4fc6d56897b048c772eb4087f854f46256132')
+      CreateGitTreeEntry(
+        'file.rb',
+        '100644',
+        'blob',
+        sha: '44b4fc6d56897b048c772eb4087f854f46256132',
+      ),
     ]);
 
     var tree = await git.createTree(repo, createTree);
@@ -154,12 +171,15 @@ void main() {
     expect(entry?.sha, '44b4fc6d56897b048c772eb4087f854f46256132');
 
     nock(fakeApiUrl)
-        .post('/repos/o/n/git/trees',
-            '{"tree":[{"path":"file.rb","mode":"100644","type":"blob","content":"content"}]}')
+        .post(
+          '/repos/o/n/git/trees',
+          '{"tree":[{"path":"file.rb","mode":"100644","type":"blob","content":"content"}]}',
+        )
         .reply(201, nocked.createTree);
 
-    createTree = CreateGitTree(
-        [CreateGitTreeEntry('file.rb', '100644', 'blob', content: 'content')]);
+    createTree = CreateGitTree([
+      CreateGitTreeEntry('file.rb', '100644', 'blob', content: 'content'),
+    ]);
 
     tree = await git.createTree(repo, createTree);
     entry = tree.entries?.first;
@@ -172,18 +192,20 @@ void main() {
   test('code search', () async {
     nock(fakeApiUrl)
         .get(
-            '/search/code?q=search%20repo%3ASpinlockLabs%2Fgithub.dart%20in%3Afile&per_page=20&page=1')
+          '/search/code?q=search%20repo%3ASpinlockLabs%2Fgithub.dart%20in%3Afile&per_page=20&page=1',
+        )
         .reply(200, nocked.searchResults);
 
-    final results = (await github.search
-            .code(
-              'search',
-              repo: 'SpinlockLabs/github.dart',
-              perPage: 20,
-              pages: 1,
-            )
-            .toList())
-        .first;
+    final results =
+        (await github.search
+                .code(
+                  'search',
+                  repo: 'SpinlockLabs/github.dart',
+                  perPage: 20,
+                  pages: 1,
+                )
+                .toList())
+            .first;
     expect(results.totalCount, 17);
     expect(results.items?.length, 17);
   });
@@ -206,8 +228,11 @@ void main() {
           .put('/repos/o/n/pulls/1/merge', '{"merge_method":"squash"}')
           .reply(201, nocked.mergedPR1);
 
-      var pullRequestMerge = await github.pullRequests
-          .merge(repo, 1, mergeMethod: MergeMethod.squash);
+      var pullRequestMerge = await github.pullRequests.merge(
+        repo,
+        1,
+        mergeMethod: MergeMethod.squash,
+      );
 
       expect(pullRequestMerge.merged, true);
       expect(pullRequestMerge.message, 'Pull Request successfully merged');
@@ -219,8 +244,11 @@ void main() {
           .put('/repos/o/n/pulls/1/merge', '{"merge_method":"rebase"}')
           .reply(201, nocked.mergedPR1);
 
-      var pullRequestMerge = await github.pullRequests
-          .merge(repo, 1, mergeMethod: MergeMethod.rebase);
+      var pullRequestMerge = await github.pullRequests.merge(
+        repo,
+        1,
+        mergeMethod: MergeMethod.rebase,
+      );
 
       expect(pullRequestMerge.merged, true);
       expect(pullRequestMerge.message, 'Pull Request successfully merged');
@@ -230,12 +258,18 @@ void main() {
     test('Merge() with commitMessage', () async {
       const commitMessage = 'Some message';
       nock(fakeApiUrl)
-          .put('/repos/o/n/pulls/1/merge',
-              '{"commit_message":"$commitMessage","merge_method":"squash"}')
+          .put(
+            '/repos/o/n/pulls/1/merge',
+            '{"commit_message":"$commitMessage","merge_method":"squash"}',
+          )
           .reply(201, nocked.mergedPR1);
 
-      var pullRequestMerge = await github.pullRequests.merge(repo, 1,
-          message: commitMessage, mergeMethod: MergeMethod.squash);
+      var pullRequestMerge = await github.pullRequests.merge(
+        repo,
+        1,
+        message: commitMessage,
+        mergeMethod: MergeMethod.squash,
+      );
 
       expect(pullRequestMerge.merged, true);
       expect(pullRequestMerge.message, 'Pull Request successfully merged');
@@ -246,14 +280,19 @@ void main() {
       const commitMessage = 'Some message';
       const commitSha = 'commitSha';
       nock(fakeApiUrl)
-          .put('/repos/o/n/pulls/1/merge',
-              '{"commit_message":"$commitMessage","sha":"$commitSha","merge_method":"squash"}')
+          .put(
+            '/repos/o/n/pulls/1/merge',
+            '{"commit_message":"$commitMessage","sha":"$commitSha","merge_method":"squash"}',
+          )
           .reply(201, nocked.mergedPR1);
 
-      var pullRequestMerge = await github.pullRequests.merge(repo, 1,
-          message: commitMessage,
-          mergeMethod: MergeMethod.squash,
-          requestSha: commitSha);
+      var pullRequestMerge = await github.pullRequests.merge(
+        repo,
+        1,
+        message: commitMessage,
+        mergeMethod: MergeMethod.squash,
+        requestSha: commitSha,
+      );
 
       expect(pullRequestMerge.merged, true);
       expect(pullRequestMerge.message, 'Pull Request successfully merged');

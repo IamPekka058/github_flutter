@@ -1,33 +1,29 @@
-name: Dart Checks
+name: Dart & Flutter CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        # Test with at least the declared minimum Dart version
-        sdk: ['3.0', stable]
+  analyze:
+    name: Dart & Flutter CI
+    runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - uses: dart-lang/setup-dart@v1
+
+      - uses: subosito/flutter-action@v2
         with:
-          sdk: ${{ matrix.sdk }}
+          channel: stable
+          cache: true
 
       - name: Install dependencies
-        run: dart pub get
-      - name: Dart Analyzer
-        run: dart analyze
-      - name: Check Dart Format
-        if: ${{ matrix.sdk == 'stable' }}
-        run: dart format --set-exit-if-changed -onone .
-      - name: Unit tests
-        run: dart test
-      - name: Check if Publishable
-        run: dart pub publish --dry-run
+        run: flutter pub get
+
+      - name: Format check
+        run: dart format --set-exit-if-changed .
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test

@@ -41,7 +41,7 @@ const Map<String, dynamic> releasePayload = {
     'received_events_url':
         'https://api.github.com/users/octocat/received_events',
     'type': 'User',
-    'site_admin': false
+    'site_admin': false,
   },
   'assets': [
     {
@@ -81,8 +81,8 @@ const Map<String, dynamic> releasePayload = {
         'received_events_url':
             'https://api.github.com/users/octocat/received_events',
         'type': 'User',
-        'site_admin': false
-      }
-    }
-  ]
+        'site_admin': false,
+      },
+    },
+  ],
 };

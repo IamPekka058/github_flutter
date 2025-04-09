@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:github/src/common/model/misc.dart';
+import 'package:github_flutter/src/models/misc.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -47,8 +47,9 @@ void main() {
     "used": 1
   }
 }''';
-      final rateLimit =
-          RateLimit.fromRateLimitResponse(jsonDecode(rateLimitJson));
+      final rateLimit = RateLimit.fromRateLimitResponse(
+        jsonDecode(rateLimitJson),
+      );
 
       expect(rateLimit.limit, 5000);
       expect(rateLimit.remaining, 4999);

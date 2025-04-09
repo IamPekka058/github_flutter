@@ -1,4 +1,4 @@
-import 'package:github/src/common.dart';
+import 'package:github_flutter/src/common.dart';
 
 /// Superclass for all services.
 abstract class Service {

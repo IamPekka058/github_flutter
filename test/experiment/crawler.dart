@@ -1,4 +1,4 @@
-import 'package:github/github.dart';
+import 'package:github_flutter/github.dart';
 
 void main() {
   final github = GitHub(auth: const Authentication.anonymous());

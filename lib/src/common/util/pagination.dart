@@ -11,12 +11,15 @@ class PaginationHelper {
 
   PaginationHelper(this.github);
 
-  Stream<http.Response> fetchStreamed(String method, String path,
-      {int? pages,
-      Map<String, String>? headers,
-      Map<String, dynamic>? params,
-      String? body,
-      int statusCode = 200}) async* {
+  Stream<http.Response> fetchStreamed(
+    String method,
+    String path, {
+    int? pages,
+    Map<String, String>? headers,
+    Map<String, dynamic>? params,
+    String? body,
+    int statusCode = 200,
+  }) async* {
     var count = 0;
     const serverErrorBackOff = Duration(seconds: 10);
     const maxServerErrors = 10;
@@ -35,11 +38,14 @@ class PaginationHelper {
     while (true) {
       http.Response response;
       try {
-        response = await github.request(method, path,
-            headers: headers,
-            params: params,
-            body: body,
-            statusCode: statusCode);
+        response = await github.request(
+          method,
+          path,
+          headers: headers,
+          params: params,
+          body: body,
+          statusCode: statusCode,
+        );
       } on ServerError {
         serverErrors += 1;
         if (serverErrors >= maxServerErrors) {
@@ -101,9 +107,10 @@ class PaginationHelper {
       body: body,
       statusCode: statusCode,
     )) {
-      final json = arrayKey == null
-          ? jsonDecode(response.body) as List?
-          : (jsonDecode(response.body) as Map)[arrayKey];
+      final json =
+          arrayKey == null
+              ? jsonDecode(response.body) as List?
+              : (jsonDecode(response.body) as Map)[arrayKey];
 
       for (final item in json) {
         yield (item as T?)!;

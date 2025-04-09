@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:github/src/common/util/utils.dart';
+import 'package:github_flutter/src/common/util/utils.dart';
 
 /// Creates a Model Object from the JSON [input]
 typedef JSONConverter<S, T> = T Function(S input);
@@ -47,9 +47,11 @@ class GitHubJson {
   /// in every map contained in [object].
   static dynamic _checkObject(dynamic object) {
     if (object is Map) {
-      return Map.fromEntries(object.entries
-          .where((e) => e.value != null)
-          .map((e) => MapEntry(e.key, _checkObject(e.value))));
+      return Map.fromEntries(
+        object.entries
+            .where((e) => e.value != null)
+            .map((e) => MapEntry(e.key, _checkObject(e.value))),
+      );
     }
     if (object is List) {
       return object.map(_checkObject).toList();

@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'package:github/github.dart';
+
+import 'package:github_flutter/github.dart';
 
 Future main() async {
   final github = GitHub();

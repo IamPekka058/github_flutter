@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'package:github/src/common.dart';
+
+import 'package:github_flutter/src/common.dart';
 
 // Crawls a Repository to Fetch All Files
 class RepositoryCrawler {

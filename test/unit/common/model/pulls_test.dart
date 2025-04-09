@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:github/src/common/model/pulls.dart';
+import 'package:github_flutter/src/models/pulls.dart';
 import 'package:test/test.dart';
 
 const String samplePullRequest = '''
