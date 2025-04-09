@@ -1,0 +1,37 @@
+name: Generate and Deploy Docs
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  generate-and-deploy-docs:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == t
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Dart environment
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      # Install dependencies
+      - name: Install dependencies
+        run: dart pub get
+
+      # Generate documentation
+      - name: Generate documentation
+        run: dart doc .
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc/api
