@@ -1,3 +1,7 @@
+## 0.0.1
+- Initial release of the github_flutter Dart library.
+
+## ----------------Switch from github to github_flutter----------------
 ## 9.24.0
 
 * Bug fixes to the `Issue.isOpen` and `Issue.isClosed` getters.
