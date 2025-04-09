@@ -1,6 +1,7 @@
 name: Generate and Deploy Docs
 
 on:
+  push:
   pull_request:
     types:
       - closed
