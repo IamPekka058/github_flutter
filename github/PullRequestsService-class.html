@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the PullRequestsService class from the github library, for the Dart programming language.">
+  <title>PullRequestsService class - github library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">github_flutter</a></li>
+    <li><a href="../github">github.dart</a></li>
+    <li class="self-crumb">PullRequestsService class</li>
+  </ol>
+  <div class="self-name">PullRequestsService</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="github&#47;github-library-sidebar.html"
+    data-below-sidebar="github&#47;PullRequestsService-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">PullRequestsService</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>The <a href="../github/PullRequestsService-class.html">PullRequestsService</a> handles communication with pull request
+methods of the GitHub API.</p>
+<p>API docs: <a href="https://developer.github.com/v3/pulls/">https://developer.github.com/v3/pulls/</a></p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../github/Service-class.html">Service</a></li>
+      <li>PullRequestsService</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+        
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="PullRequestsService" class="callable">
+          <span class="name"><a href="../github/PullRequestsService/PullRequestsService.html">PullRequestsService</a></span><span class="signature">(<span class="parameter" id="-param-github"><span class="type-annotation"><a href="../github/GitHub-class.html">GitHub</a></span> <span class="parameter-name">github</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="github" class="property inherited">
+  <span class="name"><a href="../github/Service/github.html">github</a></span>
+  <span class="signature">&#8594; <a href="../github/GitHub-class.html">GitHub</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="create" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/create.html">create</a></span><span class="signature">(<wbr><span class="parameter" id="create-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="create-param-request"><span class="type-annotation"><a href="../github/CreatePullRequest-class.html">CreatePullRequest</a></span> <span class="parameter-name">request</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequest-class.html">PullRequest</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a Pull Request based on the given <code>request</code>.
+  
+
+</dd>
+
+        <dt id="createComment" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/createComment.html">createComment</a></span><span class="signature">(<wbr><span class="parameter" id="createComment-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createComment-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span>, </span><span class="parameter" id="createComment-param-comment"><span class="type-annotation"><a href="../github/CreatePullRequestComment-class.html">CreatePullRequestComment</a></span> <span class="parameter-name">comment</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestComment-class.html">PullRequestComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a new pull request comment.
+  
+
+</dd>
+
+        <dt id="createReview" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/createReview.html">createReview</a></span><span class="signature">(<wbr><span class="parameter" id="createReview-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createReview-param-review"><span class="type-annotation"><a href="../github/CreatePullRequestReview-class.html">CreatePullRequestReview</a></span> <span class="parameter-name">review</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestReview-class.html">PullRequestReview</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a new pull request comment.
+  
+
+</dd>
+
+        <dt id="edit" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/edit.html">edit</a></span><span class="signature">(<wbr><span class="parameter" id="edit-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="edit-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span>, {</span><span class="parameter" id="edit-param-title"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">title</span>, </span><span class="parameter" id="edit-param-body"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">body</span>, </span><span class="parameter" id="edit-param-state"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">state</span>, </span><span class="parameter" id="edit-param-base"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">base</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequest-class.html">PullRequest</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Edit a pull request.
+  
+
+</dd>
+
+        <dt id="get" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/get.html">get</a></span><span class="signature">(<wbr><span class="parameter" id="get-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="get-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequest-class.html">PullRequest</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches a single pull request.
+  
+
+</dd>
+
+        <dt id="isMerged" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/isMerged.html">isMerged</a></span><span class="signature">(<wbr><span class="parameter" id="isMerged-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="isMerged-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="list" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/list.html">list</a></span><span class="signature">(<wbr><span class="parameter" id="list-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="list-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span>, </span><span class="parameter" id="list-param-base"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">base</span>, </span><span class="parameter" id="list-param-direction"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">direction</span> = <span class="default-value">&#39;desc&#39;</span>, </span><span class="parameter" id="list-param-head"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">head</span>, </span><span class="parameter" id="list-param-sort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sort</span> = <span class="default-value">&#39;created&#39;</span>, </span><span class="parameter" id="list-param-state"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">state</span> = <span class="default-value">&#39;open&#39;</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequest-class.html">PullRequest</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches several pull requests.
+  
+
+</dd>
+
+        <dt id="listComments" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/listComments.html">listComments</a></span><span class="signature">(<wbr><span class="parameter" id="listComments-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestComment-class.html">PullRequestComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all comments on all pull requests for the repository.
+  
+
+</dd>
+
+        <dt id="listCommentsByPullRequest" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/listCommentsByPullRequest.html">listCommentsByPullRequest</a></span><span class="signature">(<wbr><span class="parameter" id="listCommentsByPullRequest-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listCommentsByPullRequest-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestComment-class.html">PullRequestComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all comments on the specified pull request.
+  
+
+</dd>
+
+        <dt id="listCommits" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/listCommits.html">listCommits</a></span><span class="signature">(<wbr><span class="parameter" id="listCommits-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listCommits-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryCommit-class.html">RepositoryCommit</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the commits in a pull request.
+  
+
+</dd>
+
+        <dt id="listFiles" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/listFiles.html">listFiles</a></span><span class="signature">(<wbr><span class="parameter" id="listFiles-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listFiles-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestFile-class.html">PullRequestFile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the files in a pull request.
+  
+
+</dd>
+
+        <dt id="listReviews" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/listReviews.html">listReviews</a></span><span class="signature">(<wbr><span class="parameter" id="listReviews-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listReviews-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestReview-class.html">PullRequestReview</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the reviews for a pull request.
+  
+
+</dd>
+
+        <dt id="merge" class="callable">
+  <span class="name"><a href="../github/PullRequestsService/merge.html">merge</a></span><span class="signature">(<wbr><span class="parameter" id="merge-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="merge-param-number"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span>, {</span><span class="parameter" id="merge-param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="merge-param-mergeMethod"><span class="type-annotation"><a href="../github/MergeMethod.html">MergeMethod</a></span> <span class="parameter-name">mergeMethod</span> = <span class="default-value">MergeMethod.merge</span>, </span><span class="parameter" id="merge-param-requestSha"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">requestSha</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PullRequestMerge-class.html">PullRequestMerge</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Merge a pull request (Merge Button).
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">github_flutter</a></li>
+    <li><a href="../github">github</a></li>
+    <li class="self-crumb">PullRequestsService class</li>
+</ol>
+
+    <h5>github library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    github_flutter
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

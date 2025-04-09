@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the request method from the GitHub class, for the Dart programming language.">
+  <title>request method - GitHub class - github library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">github_flutter</a></li>
+    <li><a href="../../github">github.dart</a></li>
+    <li><a href="../../github/GitHub-class.html">GitHub</a></li>
+    <li class="self-crumb">request method</li>
+  </ol>
+  <div class="self-name">request</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="github&#47;GitHub-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">request</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/http/1.3.0/http/Response-class.html">Response</a></span>&gt;</span></span>
+<span class="name ">request</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="request-param-method"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">method</span>, </span></li>
+<li><span class="parameter" id="request-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, {</span></li>
+<li><span class="parameter" id="request-param-headers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>, </span></li>
+<li><span class="parameter" id="request-param-params"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">params</span>, </span></li>
+<li><span class="parameter" id="request-param-body"><span class="type-annotation">dynamic</span> <span class="parameter-name">body</span>, </span></li>
+<li><span class="parameter" id="request-param-statusCode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">statusCode</span>, </span></li>
+<li><span class="parameter" id="request-param-fail"><span class="type-annotation">void</span> <span class="parameter-name">fail</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-response"><span class="type-annotation"><a href="https://pub.dev/documentation/http/1.3.0/http/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span></li>
+</ol>)?, </span></li>
+<li><span class="parameter" id="request-param-preview"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">preview</span>, </span></li>
+</ol>})
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Handles Authenticated Requests in an easy to understand way.</p>
+<p><code>method</code> is the HTTP method.
+<code>path</code> can either be a path like '/repos' or a full url.
+<code>headers</code> are HTTP Headers. If it doesn't exist, the 'Accept' and 'Authorization' headers are added.
+<code>params</code> are query string parameters.
+<code>body</code> is the body content of requests that take content. Pass in a List&lt;int&gt; if you want to post binary body data. Everything else will have .toString() called on it and set as text content</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;http.Response&gt; request(
+  String method,
+  String path, {
+  Map&lt;String, String&gt;? headers,
+  Map&lt;String, dynamic&gt;? params,
+  dynamic body,
+  int? statusCode,
+  void Function(http.Response response)? fail,
+  String? preview,
+}) async {
+  if (rateLimitRemaining != null &amp;&amp; rateLimitRemaining! &lt;= 0) {
+    assert(rateLimitReset != null);
+    final now = DateTime.now();
+    final waitTime = rateLimitReset!.difference(now);
+    await Future.delayed(waitTime);
+  }
+
+  headers ??= &lt;String, String&gt;{};
+
+  if (preview != null) {
+    headers[&#39;Accept&#39;] = preview;
+  }
+
+  final authHeaderValue = auth.authorizationHeaderValue();
+  if (authHeaderValue != null) {
+    headers.putIfAbsent(&#39;Authorization&#39;, () =&gt; authHeaderValue);
+  }
+
+  &#47;&#47; See https:&#47;&#47;docs.github.com&#47;en&#47;rest&#47;overview&#47;resources-in-the-rest-api?apiVersion=2022-11-28#user-agent-required
+  headers.putIfAbsent(&#39;User-Agent&#39;, () =&gt; auth.username ?? &#39;github.dart&#39;);
+
+  if (method == &#39;PUT&#39; &amp;&amp; body == null) {
+    headers.putIfAbsent(&#39;Content-Length&#39;, () =&gt; &#39;0&#39;);
+  }
+
+  var queryString = &#39;&#39;;
+
+  if (params != null) {
+    queryString = buildQueryString(params);
+  }
+
+  final url = StringBuffer();
+
+  if (path.startsWith(&#39;http:&#47;&#47;&#39;) || path.startsWith(&#39;https:&#47;&#47;&#39;)) {
+    url.write(path);
+    url.write(queryString);
+  } else {
+    url.write(endpoint);
+    if (!path.startsWith(&#39;&#47;&#39;)) {
+      url.write(&#39;&#47;&#39;);
+    }
+    url.write(path);
+    url.write(queryString);
+  }
+
+  final request = http.Request(method, Uri.parse(url.toString()));
+  request.headers.addAll(headers);
+  if (body != null) {
+    if (body is List&lt;int&gt;) {
+      request.bodyBytes = body;
+    } else {
+      request.body = body.toString();
+    }
+  }
+
+  final streamedResponse = await client.send(request);
+
+  final response = await http.Response.fromStream(streamedResponse);
+
+  _updateRateLimit(response.headers);
+  if (statusCode != null &amp;&amp; statusCode != response.statusCode) {
+    if (fail != null) {
+      fail(response);
+    }
+    handleStatusCode(response);
+  } else {
+    return response;
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">github_flutter</a></li>
+    <li><a href="../../github">github</a></li>
+    <li><a href="../../github/GitHub-class.html">GitHub</a></li>
+    <li class="self-crumb">request method</li>
+</ol>
+
+    <h5>GitHub class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    github_flutter
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

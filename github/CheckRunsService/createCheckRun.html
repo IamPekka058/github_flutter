@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the createCheckRun method from the CheckRunsService class, for the Dart programming language.">
+  <title>createCheckRun method - CheckRunsService class - github library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">github_flutter</a></li>
+    <li><a href="../../github">github.dart</a></li>
+    <li><a href="../../github/CheckRunsService-class.html">CheckRunsService</a></li>
+    <li class="self-crumb">createCheckRun method</li>
+  </ol>
+  <div class="self-name">createCheckRun</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="github&#47;CheckRunsService-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">createCheckRun</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../github/CheckRun-class.html">CheckRun</a></span>&gt;</span></span>
+<span class="name ">createCheckRun</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="createCheckRun-param-slug"><span class="type-annotation"><a href="../../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span></li>
+<li><span class="parameter" id="createCheckRun-param-name"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-headSha"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">headSha</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-detailsUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">detailsUrl</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-externalId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">externalId</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-status"><span class="type-annotation"><a href="../../github/CheckRunStatus-class.html">CheckRunStatus</a></span> <span class="parameter-name">status</span> = <span class="default-value">CheckRunStatus.queued</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-startedAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">startedAt</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-conclusion"><span class="type-annotation"><a href="../../github/CheckRunConclusion-class.html">CheckRunConclusion</a>?</span> <span class="parameter-name">conclusion</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-completedAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">completedAt</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-output"><span class="type-annotation"><a href="../../github/CheckRunOutput-class.html">CheckRunOutput</a>?</span> <span class="parameter-name">output</span>, </span></li>
+<li><span class="parameter" id="createCheckRun-param-actions"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../github/CheckRunAction-class.html">CheckRunAction</a></span>&gt;</span>?</span> <span class="parameter-name">actions</span>, </span></li>
+</ol>})
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Creates a new check run for a specific commit in a repository.
+Your GitHub App must have the <code>checks:write</code> permission to create check runs.</p>
+<ul>
+<li><code>name</code>: The name of the check. For example, "code-coverage".</li>
+<li><code>headSha</code>: The SHA of the commit.</li>
+<li><code>detailsUrl</code>: The URL of the integrator's site that has the full details of the check.</li>
+<li><code>externalId</code>: A reference for the run on the integrator's system.</li>
+<li><code>status</code>: The current status. Can be one of queued, in_progress, or completed. Default: queued.</li>
+<li><code>startedAt</code>: The time that the check run began.</li>
+<li><code>conclusion</code>: <strong>Required if you provide completed_at or a status of completed.</strong> The final conclusion of the check.
+When the conclusion is action_required, additional details should be provided on the site specified by details_url. <strong>Note</strong>: Providing conclusion will automatically set the status parameter to completed.</li>
+<li><code>completedAt</code>: The time the check completed.</li>
+<li><code>output</code>: Check runs can accept a variety of data in the output object, including a title and summary and can optionally provide descriptive details about the run.</li>
+<li><code>actions</code>: Displays a button on GitHub that can be clicked to alert your app to do additional tasks.
+For example, a code linting app can display a button that automatically fixes detected errors.
+The button created in this object is displayed after the check run completes.
+When a user clicks the button, GitHub sends the check_run.requested_action webhook to your app.
+A maximum of three actions are accepted.</li>
+</ul>
+<p>API docs: <a href="https://developer.github.com/v3/checks/runs/#create-a-check-run">https://developer.github.com/v3/checks/runs/#create-a-check-run</a></p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;CheckRun&gt; createCheckRun(
+  RepositorySlug slug, {
+  required String name,
+  required String headSha,
+  String? detailsUrl,
+  String? externalId,
+  CheckRunStatus status = CheckRunStatus.queued,
+  DateTime? startedAt,
+  CheckRunConclusion? conclusion,
+  DateTime? completedAt,
+  CheckRunOutput? output,
+  List&lt;CheckRunAction&gt;? actions,
+}) async {
+  assert(
+    conclusion != null ||
+        (completedAt == null &amp;&amp; status != CheckRunStatus.completed),
+  );
+  assert(actions == null || actions.length &lt;= 3);
+  return github.postJSON&lt;Map&lt;String, dynamic&gt;, CheckRun&gt;(
+    &#39;&#47;repos&#47;${slug.fullName}&#47;check-runs&#39;,
+    statusCode: StatusCodes.CREATED,
+    preview: _previewHeader,
+    body: jsonEncode(
+      createNonNullMap(&lt;String, dynamic&gt;{
+        &#39;name&#39;: name,
+        &#39;head_sha&#39;: headSha,
+        &#39;details_url&#39;: detailsUrl,
+        &#39;external_id&#39;: externalId,
+        &#39;status&#39;: status,
+        &#39;started_at&#39;: dateToGitHubIso8601(startedAt),
+        &#39;conclusion&#39;: conclusion,
+        &#39;completed_at&#39;: dateToGitHubIso8601(completedAt),
+        &#39;output&#39;: output,
+        &#39;actions&#39;: actions,
+      }),
+    ),
+    convert: CheckRun.fromJson,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">github_flutter</a></li>
+    <li><a href="../../github">github</a></li>
+    <li><a href="../../github/CheckRunsService-class.html">CheckRunsService</a></li>
+    <li class="self-crumb">createCheckRun method</li>
+</ol>
+
+    <h5>CheckRunsService class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    github_flutter
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ActivityService class from the github library, for the Dart programming language.">
+  <title>ActivityService class - github library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">github_flutter</a></li>
+    <li><a href="../github">github.dart</a></li>
+    <li class="self-crumb">ActivityService class</li>
+  </ol>
+  <div class="self-name">ActivityService</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="github&#47;github-library-sidebar.html"
+    data-below-sidebar="github&#47;ActivityService-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ActivityService</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>The <a href="../github/ActivityService-class.html">ActivityService</a> handles communication with activity related methods
+of the GitHub API.</p>
+<p>API docs: <a href="https://developer.github.com/v3/activity/">https://developer.github.com/v3/activity/</a></p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../github/Service-class.html">Service</a></li>
+      <li>ActivityService</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+        
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="ActivityService" class="callable">
+          <span class="name"><a href="../github/ActivityService/ActivityService.html">ActivityService</a></span><span class="signature">(<span class="parameter" id="-param-github"><span class="type-annotation"><a href="../github/GitHub-class.html">GitHub</a></span> <span class="parameter-name">github</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="github" class="property inherited">
+  <span class="name"><a href="../github/Service/github.html">github</a></span>
+  <span class="signature">&#8594; <a href="../github/GitHub-class.html">GitHub</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="deleteRepositorySubscription" class="callable">
+  <span class="name"><a href="../github/ActivityService/deleteRepositorySubscription.html">deleteRepositorySubscription</a></span><span class="signature">(<wbr><span class="parameter" id="deleteRepositorySubscription-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes a Repository Subscription
+  
+
+</dd>
+
+        <dt id="getRepositorySubscription" class="callable">
+  <span class="name"><a href="../github/ActivityService/getRepositorySubscription.html">getRepositorySubscription</a></span><span class="signature">(<wbr><span class="parameter" id="getRepositorySubscription-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositorySubscription-class.html">RepositorySubscription</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches repository subscription information.
+  
+
+</dd>
+
+        <dt id="getThread" class="callable">
+  <span class="name"><a href="../github/ActivityService/getThread.html">getThread</a></span><span class="signature">(<wbr><span class="parameter" id="getThread-param-threadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">threadId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Notification-class.html">Notification</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches the specified notification thread.
+  
+
+</dd>
+
+        <dt id="isStarred" class="callable">
+  <span class="name"><a href="../github/ActivityService/isStarred.html">isStarred</a></span><span class="signature">(<wbr><span class="parameter" id="isStarred-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Checks if the currently authenticated user has starred the specified repository.
+  
+
+</dd>
+
+        <dt id="listEventsForOrganization" class="callable">
+  <span class="name"><a href="../github/ActivityService/listEventsForOrganization.html">listEventsForOrganization</a></span><span class="signature">(<wbr><span class="parameter" id="listEventsForOrganization-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, {</span><span class="parameter" id="listEventsForOrganization-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists public events for an organization.
+  
+
+</dd>
+
+        <dt id="listEventsPerformedByUser" class="callable">
+  <span class="name"><a href="../github/ActivityService/listEventsPerformedByUser.html">listEventsPerformedByUser</a></span><span class="signature">(<wbr><span class="parameter" id="listEventsPerformedByUser-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span>, {</span><span class="parameter" id="listEventsPerformedByUser-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the events performed by a user.
+  
+
+</dd>
+
+        <dt id="listNotifications" class="callable">
+  <span class="name"><a href="../github/ActivityService/listNotifications.html">listNotifications</a></span><span class="signature">(<wbr>{<span class="parameter" id="listNotifications-param-all"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">all</span> = <span class="default-value">false</span>, </span><span class="parameter" id="listNotifications-param-participating"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">participating</span> = <span class="default-value">false</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Notification-class.html">Notification</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all notifications for the current user.
+  
+
+</dd>
+
+        <dt id="listPublicEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/listPublicEvents.html">listPublicEvents</a></span><span class="signature">(<wbr>{<span class="parameter" id="listPublicEvents-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pages</span> = <span class="default-value">2</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists public events.
+  
+
+</dd>
+
+        <dt id="listPublicEventsPerformedByUser" class="callable">
+  <span class="name"><a href="../github/ActivityService/listPublicEventsPerformedByUser.html">listPublicEventsPerformedByUser</a></span><span class="signature">(<wbr><span class="parameter" id="listPublicEventsPerformedByUser-param-username"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">username</span>, {</span><span class="parameter" id="listPublicEventsPerformedByUser-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the public events performed by a user.
+  
+
+</dd>
+
+        <dt id="listRepositoryEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/listRepositoryEvents.html">listRepositoryEvents</a></span><span class="signature">(<wbr><span class="parameter" id="listRepositoryEvents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listRepositoryEvents-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists repository events.
+  
+
+</dd>
+
+        <dt id="listRepositoryIssueEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/listRepositoryIssueEvents.html">listRepositoryIssueEvents</a></span><span class="signature">(<wbr><span class="parameter" id="listRepositoryIssueEvents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listRepositoryIssueEvents-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists repository issue events.
+  
+
+</dd>
+
+        <dt id="listRepositoryNetworkEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/listRepositoryNetworkEvents.html">listRepositoryNetworkEvents</a></span><span class="signature">(<wbr><span class="parameter" id="listRepositoryNetworkEvents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listRepositoryNetworkEvents-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">pages</span> = <span class="default-value">2</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Event-class.html">Event</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists public events for a network of repositories.
+  
+
+</dd>
+
+        <dt id="listRepositoryNotifications" class="callable">
+  <span class="name"><a href="../github/ActivityService/listRepositoryNotifications.html">listRepositoryNotifications</a></span><span class="signature">(<wbr><span class="parameter" id="listRepositoryNotifications-param-repository"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">repository</span>, {</span><span class="parameter" id="listRepositoryNotifications-param-all"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">all</span> = <span class="default-value">false</span>, </span><span class="parameter" id="listRepositoryNotifications-param-participating"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">participating</span> = <span class="default-value">false</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Notification-class.html">Notification</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all notifications for a given repository.
+  
+
+</dd>
+
+        <dt id="listStargazers" class="callable">
+  <span class="name"><a href="../github/ActivityService/listStargazers.html">listStargazers</a></span><span class="signature">(<wbr><span class="parameter" id="listStargazers-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listStargazers-param-perPage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">perPage</span> = <span class="default-value">30</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/User-class.html">User</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists people who have starred the specified repo.
+  
+
+</dd>
+
+        <dt id="listStarred" class="callable">
+  <span class="name"><a href="../github/ActivityService/listStarred.html">listStarred</a></span><span class="signature">(<wbr>{<span class="parameter" id="listStarred-param-perPage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">perPage</span> = <span class="default-value">30</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all the repos by the current user.
+  
+
+</dd>
+
+        <dt id="listStarredByUser" class="callable">
+  <span class="name"><a href="../github/ActivityService/listStarredByUser.html">listStarredByUser</a></span><span class="signature">(<wbr><span class="parameter" id="listStarredByUser-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span>, {</span><span class="parameter" id="listStarredByUser-param-perPage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">perPage</span> = <span class="default-value">30</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all the repos starred by a user.
+  
+
+</dd>
+
+        <dt id="listWatched" class="callable">
+  <span class="name"><a href="../github/ActivityService/listWatched.html">listWatched</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the repositories the current user is watching.
+  
+
+</dd>
+
+        <dt id="listWatchedByUser" class="callable">
+  <span class="name"><a href="../github/ActivityService/listWatchedByUser.html">listWatchedByUser</a></span><span class="signature">(<wbr><span class="parameter" id="listWatchedByUser-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the repositories the specified user is watching.
+  
+
+</dd>
+
+        <dt id="listWatchers" class="callable">
+  <span class="name"><a href="../github/ActivityService/listWatchers.html">listWatchers</a></span><span class="signature">(<wbr><span class="parameter" id="listWatchers-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/User-class.html">User</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the watchers of the specified repository.
+  
+
+</dd>
+
+        <dt id="markNotificationsRead" class="callable">
+  <span class="name"><a href="../github/ActivityService/markNotificationsRead.html">markNotificationsRead</a></span><span class="signature">(<wbr>{<span class="parameter" id="markNotificationsRead-param-lastRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">lastRead</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Marks all notifications up to <code>lastRead</code> as read.
+  
+
+</dd>
+
+        <dt id="markRepositoryNotificationsRead" class="callable">
+  <span class="name"><a href="../github/ActivityService/markRepositoryNotificationsRead.html">markRepositoryNotificationsRead</a></span><span class="signature">(<wbr><span class="parameter" id="markRepositoryNotificationsRead-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="markRepositoryNotificationsRead-param-lastRead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">lastRead</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Marks all notifications up to <code>lastRead</code> in the specified repository as
+read.
+  
+
+</dd>
+
+        <dt id="markThreadRead" class="callable">
+  <span class="name"><a href="../github/ActivityService/markThreadRead.html">markThreadRead</a></span><span class="signature">(<wbr><span class="parameter" id="markThreadRead-param-threadId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">threadId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Mark the specified notification thread as read.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pollEventsForOrganization" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollEventsForOrganization.html">pollEventsForOrganization</a></span><span class="signature">(<wbr><span class="parameter" id="pollEventsForOrganization-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for public events for an organization.
+  
+
+</dd>
+
+        <dt id="pollEventsReceivedByUser" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollEventsReceivedByUser.html">pollEventsReceivedByUser</a></span><span class="signature">(<wbr><span class="parameter" id="pollEventsReceivedByUser-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for events received by a user.
+  
+
+</dd>
+
+        <dt id="pollPublicEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollPublicEvents.html">pollPublicEvents</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for public events.
+  
+
+</dd>
+
+        <dt id="pollPublicEventsReceivedByUser" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollPublicEventsReceivedByUser.html">pollPublicEventsReceivedByUser</a></span><span class="signature">(<wbr><span class="parameter" id="pollPublicEventsReceivedByUser-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for public events received by a user.
+  
+
+</dd>
+
+        <dt id="pollRepositoryEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollRepositoryEvents.html">pollRepositoryEvents</a></span><span class="signature">(<wbr><span class="parameter" id="pollRepositoryEvents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for repository events.
+  
+
+</dd>
+
+        <dt id="pollRepositoryIssueEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollRepositoryIssueEvents.html">pollRepositoryIssueEvents</a></span><span class="signature">(<wbr><span class="parameter" id="pollRepositoryIssueEvents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for repository issue events.
+  
+
+</dd>
+
+        <dt id="pollRepositoryNetworkEvents" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollRepositoryNetworkEvents.html">pollRepositoryNetworkEvents</a></span><span class="signature">(<wbr><span class="parameter" id="pollRepositoryNetworkEvents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for repository network events.
+  
+
+</dd>
+
+        <dt id="pollUserEventsForOrganization" class="callable">
+  <span class="name"><a href="../github/ActivityService/pollUserEventsForOrganization.html">pollUserEventsForOrganization</a></span><span class="signature">(<wbr><span class="parameter" id="pollUserEventsForOrganization-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span>, </span><span class="parameter" id="pollUserEventsForOrganization-param-organization"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">organization</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../github/EventPoller-class.html">EventPoller</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an <a href="../github/EventPoller-class.html">EventPoller</a> for the user's organization dashboard.
+  
+
+</dd>
+
+        <dt id="setRepositorySubscription" class="callable">
+  <span class="name"><a href="../github/ActivityService/setRepositorySubscription.html">setRepositorySubscription</a></span><span class="signature">(<wbr><span class="parameter" id="setRepositorySubscription-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="setRepositorySubscription-param-subscribed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">subscribed</span>, </span><span class="parameter" id="setRepositorySubscription-param-ignored"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">ignored</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositorySubscription-class.html">RepositorySubscription</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the Repository Subscription Status
+  
+
+</dd>
+
+        <dt id="star" class="callable">
+  <span class="name"><a href="../github/ActivityService/star.html">star</a></span><span class="signature">(<wbr><span class="parameter" id="star-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stars the specified repository for the currently authenticated user.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="unstar" class="callable">
+  <span class="name"><a href="../github/ActivityService/unstar.html">unstar</a></span><span class="signature">(<wbr><span class="parameter" id="unstar-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Unstars the specified repository for the currently authenticated user.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">github_flutter</a></li>
+    <li><a href="../github">github</a></li>
+    <li class="self-crumb">ActivityService class</li>
+</ol>
+
+    <h5>github library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    github_flutter
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RepositoriesService class from the github library, for the Dart programming language.">
+  <title>RepositoriesService class - github library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">github_flutter</a></li>
+    <li><a href="../github">github.dart</a></li>
+    <li class="self-crumb">RepositoriesService class</li>
+  </ol>
+  <div class="self-name">RepositoriesService</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="github&#47;github-library-sidebar.html"
+    data-below-sidebar="github&#47;RepositoriesService-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">RepositoriesService</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>The <a href="../github/RepositoriesService-class.html">RepositoriesService</a> handles communication with repository related
+methods of the GitHub API.</p>
+<p>API docs: <a href="https://developer.github.com/v3/repos/">https://developer.github.com/v3/repos/</a></p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../github/Service-class.html">Service</a></li>
+      <li>RepositoriesService</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+        
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="RepositoriesService" class="callable">
+          <span class="name"><a href="../github/RepositoriesService/RepositoriesService.html">RepositoriesService</a></span><span class="signature">(<span class="parameter" id="-param-github"><span class="type-annotation"><a href="../github/GitHub-class.html">GitHub</a></span> <span class="parameter-name">github</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="github" class="property inherited">
+  <span class="name"><a href="../github/Service/github.html">github</a></span>
+  <span class="signature">&#8594; <a href="../github/GitHub-class.html">GitHub</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addCollaborator" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/addCollaborator.html">addCollaborator</a></span><span class="signature">(<wbr><span class="parameter" id="addCollaborator-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="addCollaborator-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="compareCommits" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/compareCommits.html">compareCommits</a></span><span class="signature">(<wbr><span class="parameter" id="compareCommits-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="compareCommits-param-refBase"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">refBase</span>, </span><span class="parameter" id="compareCommits-param-refHead"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">refHead</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/GitHubComparison-class.html">GitHubComparison</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  <code>refBase</code> and <code>refHead</code> can be the same value for a branch, commit, or ref
+in <code>slug</code> or specify other repositories by using <code>repo:ref</code> syntax.
+  
+
+</dd>
+
+        <dt id="createCommitComment" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createCommitComment.html">createCommitComment</a></span><span class="signature">(<wbr><span class="parameter" id="createCommitComment-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createCommitComment-param-commit"><span class="type-annotation"><a href="../github/RepositoryCommit-class.html">RepositoryCommit</a></span> <span class="parameter-name">commit</span>, {</span><span class="parameter" id="createCommitComment-param-body"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">body</span>, </span><span class="parameter" id="createCommitComment-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">path</span>, </span><span class="parameter" id="createCommitComment-param-position"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">position</span>, </span><span class="parameter" id="createCommitComment-param-line"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">line</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CommitComment-class.html">CommitComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Create a comment for a commit using its sha.
+  
+
+</dd>
+
+        <dt id="createDeployKey" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createDeployKey.html">createDeployKey</a></span><span class="signature">(<wbr><span class="parameter" id="createDeployKey-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createDeployKey-param-key"><span class="type-annotation"><a href="../github/CreatePublicKey-class.html">CreatePublicKey</a></span> <span class="parameter-name">key</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PublicKey-class.html">PublicKey</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a deploy key for a repository.
+  
+
+</dd>
+
+        <dt id="createFile" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createFile.html">createFile</a></span><span class="signature">(<wbr><span class="parameter" id="createFile-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createFile-param-file"><span class="type-annotation"><a href="../github/CreateFile-class.html">CreateFile</a></span> <span class="parameter-name">file</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ContentCreation-class.html">ContentCreation</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a new file in a repository.
+  
+
+</dd>
+
+        <dt id="createFork" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createFork.html">createFork</a></span><span class="signature">(<wbr><span class="parameter" id="createFork-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, [</span><span class="parameter" id="createFork-param-fork"><span class="type-annotation"><a href="../github/CreateFork-class.html">CreateFork</a>?</span> <span class="parameter-name">fork</span></span>])
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a fork for the authenticated user.
+  
+
+</dd>
+
+        <dt id="createHook" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createHook.html">createHook</a></span><span class="signature">(<wbr><span class="parameter" id="createHook-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createHook-param-hook"><span class="type-annotation"><a href="../github/CreateHook-class.html">CreateHook</a></span> <span class="parameter-name">hook</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Hook-class.html">Hook</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a repository hook based on the specified <code>hook</code>.
+  
+
+</dd>
+
+        <dt id="createRelease" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createRelease.html">createRelease</a></span><span class="signature">(<wbr><span class="parameter" id="createRelease-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createRelease-param-createRelease"><span class="type-annotation"><a href="../github/CreateRelease-class.html">CreateRelease</a></span> <span class="parameter-name">createRelease</span>, {</span><span class="parameter" id="createRelease-param-getIfExists"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">getIfExists</span> = <span class="default-value">true</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Release-class.html">Release</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a Release based on the specified <code>createRelease</code>.
+  
+
+</dd>
+
+        <dt id="createRepository" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createRepository.html">createRepository</a></span><span class="signature">(<wbr><span class="parameter" id="createRepository-param-repository"><span class="type-annotation"><a href="../github/CreateRepository-class.html">CreateRepository</a></span> <span class="parameter-name">repository</span>, {</span><span class="parameter" id="createRepository-param-org"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">org</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a repository with <code>repository</code>. If an <code>org</code> is specified, the new
+repository will be created under that organization. If no <code>org</code> is
+specified, it will be created for the authenticated user.
+  
+
+</dd>
+
+        <dt id="createStatus" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/createStatus.html">createStatus</a></span><span class="signature">(<wbr><span class="parameter" id="createStatus-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="createStatus-param-ref"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">ref</span>, </span><span class="parameter" id="createStatus-param-request"><span class="type-annotation"><a href="../github/CreateStatus-class.html">CreateStatus</a></span> <span class="parameter-name">request</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryStatus-class.html">RepositoryStatus</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a new status for a repository at the specified reference.
+The <code>ref</code> can be a SHA, a branch name, or a tag name.
+  
+
+</dd>
+
+        <dt id="deleteCommitComment" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteCommitComment.html">deleteCommitComment</a></span><span class="signature">(<wbr><span class="parameter" id="deleteCommitComment-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="deleteCommitComment-param-id"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Delete a commit comment.
+*<code>id</code>: id of the comment to delete.
+  
+
+</dd>
+
+        <dt id="deleteDeployKey" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteDeployKey.html">deleteDeployKey</a></span><span class="signature">(<wbr>{<span class="parameter" id="deleteDeployKey-param-slug"><span>required</span> <span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="deleteDeployKey-param-key"><span>required</span> <span class="type-annotation"><a href="../github/PublicKey-class.html">PublicKey</a></span> <span class="parameter-name">key</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Delete a deploy key.
+  
+
+</dd>
+
+        <dt id="deleteFile" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteFile.html">deleteFile</a></span><span class="signature">(<wbr><span class="parameter" id="deleteFile-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="deleteFile-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span><span class="parameter" id="deleteFile-param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="deleteFile-param-sha"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sha</span>, </span><span class="parameter" id="deleteFile-param-branch"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">branch</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ContentCreation-class.html">ContentCreation</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes the specified file.
+  
+
+</dd>
+
+        <dt id="deleteHook" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteHook.html">deleteHook</a></span><span class="signature">(<wbr><span class="parameter" id="deleteHook-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="deleteHook-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="deleteRelease" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteRelease.html">deleteRelease</a></span><span class="signature">(<wbr><span class="parameter" id="deleteRelease-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="deleteRelease-param-release"><span class="type-annotation"><a href="../github/Release-class.html">Release</a></span> <span class="parameter-name">release</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Delete the release.
+  
+
+</dd>
+
+        <dt id="deleteReleaseAsset" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteReleaseAsset.html">deleteReleaseAsset</a></span><span class="signature">(<wbr><span class="parameter" id="deleteReleaseAsset-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="deleteReleaseAsset-param-asset"><span class="type-annotation"><a href="../github/ReleaseAsset-class.html">ReleaseAsset</a></span> <span class="parameter-name">asset</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Delete a release asset.
+  
+
+</dd>
+
+        <dt id="deleteRepository" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/deleteRepository.html">deleteRepository</a></span><span class="signature">(<wbr><span class="parameter" id="deleteRepository-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes a repository.
+  
+
+</dd>
+
+        <dt id="editHook" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/editHook.html">editHook</a></span><span class="signature">(<wbr><span class="parameter" id="editHook-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="editHook-param-hookToEdit"><span class="type-annotation"><a href="../github/Hook-class.html">Hook</a></span> <span class="parameter-name">hookToEdit</span>, {</span><span class="parameter" id="editHook-param-configUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">configUrl</span>, </span><span class="parameter" id="editHook-param-configContentType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">configContentType</span>, </span><span class="parameter" id="editHook-param-configSecret"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">configSecret</span>, </span><span class="parameter" id="editHook-param-configInsecureSsl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">configInsecureSsl</span>, </span><span class="parameter" id="editHook-param-events"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">events</span>, </span><span class="parameter" id="editHook-param-addEvents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">addEvents</span>, </span><span class="parameter" id="editHook-param-removeEvents"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">removeEvents</span>, </span><span class="parameter" id="editHook-param-active"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">active</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Hook-class.html">Hook</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Edits a hook.
+  
+
+</dd>
+
+        <dt id="editRelease" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/editRelease.html">editRelease</a></span><span class="signature">(<wbr><span class="parameter" id="editRelease-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="editRelease-param-releaseToEdit"><span class="type-annotation"><a href="../github/Release-class.html">Release</a></span> <span class="parameter-name">releaseToEdit</span>, {</span><span class="parameter" id="editRelease-param-tagName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tagName</span>, </span><span class="parameter" id="editRelease-param-targetCommitish"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">targetCommitish</span>, </span><span class="parameter" id="editRelease-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="editRelease-param-body"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">body</span>, </span><span class="parameter" id="editRelease-param-draft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">draft</span>, </span><span class="parameter" id="editRelease-param-preRelease"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">preRelease</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Release-class.html">Release</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Edits the given release with new fields.
+  
+
+</dd>
+
+        <dt id="editReleaseAsset" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/editReleaseAsset.html">editReleaseAsset</a></span><span class="signature">(<wbr><span class="parameter" id="editReleaseAsset-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="editReleaseAsset-param-assetToEdit"><span class="type-annotation"><a href="../github/ReleaseAsset-class.html">ReleaseAsset</a></span> <span class="parameter-name">assetToEdit</span>, {</span><span class="parameter" id="editReleaseAsset-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="editReleaseAsset-param-label"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">label</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ReleaseAsset-class.html">ReleaseAsset</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Edits a release asset.
+  
+
+</dd>
+
+        <dt id="editRepository" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/editRepository.html">editRepository</a></span><span class="signature">(<wbr><span class="parameter" id="editRepository-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="editRepository-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="editRepository-param-description"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">description</span>, </span><span class="parameter" id="editRepository-param-homepage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">homepage</span>, </span><span class="parameter" id="editRepository-param-private"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">private</span>, </span><span class="parameter" id="editRepository-param-hasIssues"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">hasIssues</span>, </span><span class="parameter" id="editRepository-param-hasWiki"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">hasWiki</span>, </span><span class="parameter" id="editRepository-param-hasDownloads"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">hasDownloads</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Edit a Repository.
+  
+
+</dd>
+
+        <dt id="generateReleaseNotes" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/generateReleaseNotes.html">generateReleaseNotes</a></span><span class="signature">(<wbr><span class="parameter" id="generateReleaseNotes-param-crn"><span class="type-annotation"><a href="../github/CreateReleaseNotes-class.html">CreateReleaseNotes</a></span> <span class="parameter-name">crn</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ReleaseNotes-class.html">ReleaseNotes</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generate a name and body describing a release. The body content will be
+markdown formatted and contain information like the changes since last
+release and users who contributed. The generated release notes are not
+saved anywhere. They are intended to be generated and used when
+creating a new release.
+  
+
+</dd>
+
+        <dt id="getArchiveLink" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getArchiveLink.html">getArchiveLink</a></span><span class="signature">(<wbr><span class="parameter" id="getArchiveLink-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getArchiveLink-param-ref"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">ref</span>, {</span><span class="parameter" id="getArchiveLink-param-format"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">format</span> = <span class="default-value">&#39;tarball&#39;</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets an archive link for the specified repository and reference.
+  
+
+</dd>
+
+        <dt id="getBranch" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getBranch.html">getBranch</a></span><span class="signature">(<wbr><span class="parameter" id="getBranch-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getBranch-param-branch"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">branch</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Branch-class.html">Branch</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches the specified branch.
+  
+
+</dd>
+
+        <dt id="getCombinedStatus" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getCombinedStatus.html">getCombinedStatus</a></span><span class="signature">(<wbr><span class="parameter" id="getCombinedStatus-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getCombinedStatus-param-ref"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">ref</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CombinedRepositoryStatus-class.html">CombinedRepositoryStatus</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets a Combined Status for the specified repository and ref.
+  
+
+</dd>
+
+        <dt id="getCommit" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getCommit.html">getCommit</a></span><span class="signature">(<wbr><span class="parameter" id="getCommit-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getCommit-param-sha"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sha</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryCommit-class.html">RepositoryCommit</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches the specified commit.
+  
+
+</dd>
+
+        <dt id="getCommitComment" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getCommitComment.html">getCommitComment</a></span><span class="signature">(<wbr><span class="parameter" id="getCommitComment-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="getCommitComment-param-id"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CommitComment-class.html">CommitComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Retrieve a commit comment by its id.
+  
+
+</dd>
+
+        <dt id="getCommitDiff" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getCommitDiff.html">getCommitDiff</a></span><span class="signature">(<wbr><span class="parameter" id="getCommitDiff-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getCommitDiff-param-sha"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sha</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getContents" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getContents.html">getContents</a></span><span class="signature">(<wbr><span class="parameter" id="getContents-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getContents-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, {</span><span class="parameter" id="getContents-param-ref"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ref</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryContents-class.html">RepositoryContents</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches content in a repository at the specified <code>path</code>.
+  
+
+</dd>
+
+        <dt id="getDeployKey" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getDeployKey.html">getDeployKey</a></span><span class="signature">(<wbr><span class="parameter" id="getDeployKey-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="getDeployKey-param-id"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PublicKey-class.html">PublicKey</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get a deploy key.
+  
+
+</dd>
+
+        <dt id="getHook" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getHook.html">getHook</a></span><span class="signature">(<wbr><span class="parameter" id="getHook-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getHook-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Hook-class.html">Hook</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches a single hook by <code>id</code>.
+  
+
+</dd>
+
+        <dt id="getLatestPagesBuild" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getLatestPagesBuild.html">getLatestPagesBuild</a></span><span class="signature">(<wbr><span class="parameter" id="getLatestPagesBuild-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PageBuild-class.html">PageBuild</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get latest Pages build.
+  
+
+</dd>
+
+        <dt id="getLatestRelease" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getLatestRelease.html">getLatestRelease</a></span><span class="signature">(<wbr><span class="parameter" id="getLatestRelease-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Release-class.html">Release</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the latest release for the specified repository.
+  
+
+</dd>
+
+        <dt id="getLicense" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getLicense.html">getLicense</a></span><span class="signature">(<wbr><span class="parameter" id="getLicense-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/LicenseDetails-class.html">LicenseDetails</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getPagesInfo" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getPagesInfo.html">getPagesInfo</a></span><span class="signature">(<wbr><span class="parameter" id="getPagesInfo-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryPages-class.html">RepositoryPages</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches the GitHub pages information for the specified repository.
+  
+
+</dd>
+
+        <dt id="getParticipation" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getParticipation.html">getParticipation</a></span><span class="signature">(<wbr><span class="parameter" id="getParticipation-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ContributorParticipation-class.html">ContributorParticipation</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches Participation Breakdowns.
+  
+
+</dd>
+
+        <dt id="getReadme" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getReadme.html">getReadme</a></span><span class="signature">(<wbr><span class="parameter" id="getReadme-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="getReadme-param-ref"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ref</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/GitHubFile-class.html">GitHubFile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches the readme file for a repository.
+  
+
+</dd>
+
+        <dt id="getReleaseAsset" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getReleaseAsset.html">getReleaseAsset</a></span><span class="signature">(<wbr><span class="parameter" id="getReleaseAsset-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getReleaseAsset-param-release"><span class="type-annotation"><a href="../github/Release-class.html">Release</a></span> <span class="parameter-name">release</span>, {</span><span class="parameter" id="getReleaseAsset-param-assetId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">assetId</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ReleaseAsset-class.html">ReleaseAsset</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get a single release asset.
+  
+
+</dd>
+
+        <dt id="getReleaseById" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getReleaseById.html">getReleaseById</a></span><span class="signature">(<wbr><span class="parameter" id="getReleaseById-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getReleaseById-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Release-class.html">Release</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches a single release by the release ID.
+  
+
+</dd>
+
+        <dt id="getReleaseByTagName" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getReleaseByTagName.html">getReleaseByTagName</a></span><span class="signature">(<wbr><span class="parameter" id="getReleaseByTagName-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="getReleaseByTagName-param-tagName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tagName</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Release-class.html">Release</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches a single release by the release tag name.
+  
+
+</dd>
+
+        <dt id="getRepositories" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getRepositories.html">getRepositories</a></span><span class="signature">(<wbr><span class="parameter" id="getRepositories-param-slugs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span>&gt;</span></span> <span class="parameter-name">slugs</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches a list of repositories specified by <code>slugs</code>.
+  
+
+</dd>
+
+        <dt id="getRepository" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/getRepository.html">getRepository</a></span><span class="signature">(<wbr><span class="parameter" id="getRepository-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches the repository specified by the <code>slug</code>.
+  
+
+</dd>
+
+        <dt id="isCollaborator" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/isCollaborator.html">isCollaborator</a></span><span class="signature">(<wbr><span class="parameter" id="isCollaborator-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="isCollaborator-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="listBranches" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listBranches.html">listBranches</a></span><span class="signature">(<wbr><span class="parameter" id="listBranches-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Branch-class.html">Branch</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the branches of the specified repository.
+  
+
+</dd>
+
+        <dt id="listCodeFrequency" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listCodeFrequency.html">listCodeFrequency</a></span><span class="signature">(<wbr><span class="parameter" id="listCodeFrequency-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/WeeklyChangesCount-class.html">WeeklyChangesCount</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches weekly addition and deletion counts.
+  
+
+</dd>
+
+        <dt id="listCollaborators" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listCollaborators.html">listCollaborators</a></span><span class="signature">(<wbr><span class="parameter" id="listCollaborators-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Collaborator-class.html">Collaborator</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the users that have access to the repository identified by <code>slug</code>.
+  
+
+</dd>
+
+        <dt id="listCommitActivity" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listCommitActivity.html">listCommitActivity</a></span><span class="signature">(<wbr><span class="parameter" id="listCommitActivity-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/YearCommitCountWeek-class.html">YearCommitCountWeek</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches commit counts for the past year.
+  
+
+</dd>
+
+        <dt id="listCommitComments" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listCommitComments.html">listCommitComments</a></span><span class="signature">(<wbr><span class="parameter" id="listCommitComments-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CommitComment-class.html">CommitComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a list of all commit comments in a repository.
+  
+
+</dd>
+
+        <dt id="listCommits" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listCommits.html">listCommits</a></span><span class="signature">(<wbr><span class="parameter" id="listCommits-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listCommits-param-sha"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sha</span>, </span><span class="parameter" id="listCommits-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">path</span>, </span><span class="parameter" id="listCommits-param-author"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">author</span>, </span><span class="parameter" id="listCommits-param-committer"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">committer</span>, </span><span class="parameter" id="listCommits-param-since"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">since</span>, </span><span class="parameter" id="listCommits-param-until"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">until</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryCommit-class.html">RepositoryCommit</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the commits of the provided repository <code>slug</code>.
+  
+
+</dd>
+
+        <dt id="listContributors" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listContributors.html">listContributors</a></span><span class="signature">(<wbr><span class="parameter" id="listContributors-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listContributors-param-anon"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">anon</span> = <span class="default-value">false</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Contributor-class.html">Contributor</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the contributors of the specified repository.
+  
+
+</dd>
+
+        <dt id="listContributorStats" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listContributorStats.html">listContributorStats</a></span><span class="signature">(<wbr><span class="parameter" id="listContributorStats-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ContributorStatistics-class.html">ContributorStatistics</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists repository contributor statistics.
+  
+
+</dd>
+
+        <dt id="listDeployKeys" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listDeployKeys.html">listDeployKeys</a></span><span class="signature">(<wbr><span class="parameter" id="listDeployKeys-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PublicKey-class.html">PublicKey</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the deploy keys for a repository.
+  
+
+</dd>
+
+        <dt id="listForks" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listForks.html">listForks</a></span><span class="signature">(<wbr><span class="parameter" id="listForks-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the forks of the specified repository.
+  
+
+</dd>
+
+        <dt id="listHooks" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listHooks.html">listHooks</a></span><span class="signature">(<wbr><span class="parameter" id="listHooks-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Hook-class.html">Hook</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the hooks of the specified repository.
+  
+
+</dd>
+
+        <dt id="listLanguages" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listLanguages.html">listLanguages</a></span><span class="signature">(<wbr><span class="parameter" id="listLanguages-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/LanguageBreakdown-class.html">LanguageBreakdown</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Gets a language breakdown for the specified repository.
+  
+
+</dd>
+
+        <dt id="listOrganizationRepositories" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listOrganizationRepositories.html">listOrganizationRepositories</a></span><span class="signature">(<wbr><span class="parameter" id="listOrganizationRepositories-param-org"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">org</span>, {</span><span class="parameter" id="listOrganizationRepositories-param-type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">type</span> = <span class="default-value">&#39;all&#39;</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  List repositories for the specified <code>org</code>.
+  
+
+</dd>
+
+        <dt id="listPagesBuilds" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listPagesBuilds.html">listPagesBuilds</a></span><span class="signature">(<wbr><span class="parameter" id="listPagesBuilds-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PageBuild-class.html">PageBuild</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  List Pages builds.
+  
+
+</dd>
+
+        <dt id="listPublicRepositories" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listPublicRepositories.html">listPublicRepositories</a></span><span class="signature">(<wbr>{<span class="parameter" id="listPublicRepositories-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">50</span>, </span><span class="parameter" id="listPublicRepositories-param-since"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">since</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists all the public repositories on GitHub, in the order that they were
+created.
+  
+
+</dd>
+
+        <dt id="listPunchcard" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listPunchcard.html">listPunchcard</a></span><span class="signature">(<wbr><span class="parameter" id="listPunchcard-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/PunchcardEntry-class.html">PunchcardEntry</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fetches Punchcard.
+  
+
+</dd>
+
+        <dt id="listReleaseAssets" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listReleaseAssets.html">listReleaseAssets</a></span><span class="signature">(<wbr><span class="parameter" id="listReleaseAssets-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listReleaseAssets-param-release"><span class="type-annotation"><a href="../github/Release-class.html">Release</a></span> <span class="parameter-name">release</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ReleaseAsset-class.html">ReleaseAsset</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists assets for a release.
+  
+
+</dd>
+
+        <dt id="listReleases" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listReleases.html">listReleases</a></span><span class="signature">(<wbr><span class="parameter" id="listReleases-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Release-class.html">Release</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists releases for the specified repository.
+  
+
+</dd>
+
+        <dt id="listRepositories" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listRepositories.html">listRepositories</a></span><span class="signature">(<wbr>{<span class="parameter" id="listRepositories-param-type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">type</span> = <span class="default-value">&#39;owner&#39;</span>, </span><span class="parameter" id="listRepositories-param-sort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sort</span> = <span class="default-value">&#39;full_name&#39;</span>, </span><span class="parameter" id="listRepositories-param-direction"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">direction</span> = <span class="default-value">&#39;asc&#39;</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the repositories of the currently authenticated user.
+  
+
+</dd>
+
+        <dt id="listSingleCommitComments" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listSingleCommitComments.html">listSingleCommitComments</a></span><span class="signature">(<wbr><span class="parameter" id="listSingleCommitComments-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listSingleCommitComments-param-commit"><span class="type-annotation"><a href="../github/RepositoryCommit-class.html">RepositoryCommit</a></span> <span class="parameter-name">commit</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CommitComment-class.html">CommitComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a list of all comments for a specific commit.
+  
+
+</dd>
+
+        <dt id="listStatuses" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listStatuses.html">listStatuses</a></span><span class="signature">(<wbr><span class="parameter" id="listStatuses-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="listStatuses-param-ref"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">ref</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryStatus-class.html">RepositoryStatus</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the statuses of a repository at the specified reference.
+The <code>ref</code> can be a SHA, a branch name, or a tag name.
+  
+
+</dd>
+
+        <dt id="listTags" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listTags.html">listTags</a></span><span class="signature">(<wbr><span class="parameter" id="listTags-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="listTags-param-page"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">page</span> = <span class="default-value">1</span>, </span><span class="parameter" id="listTags-param-pages"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pages</span>, </span><span class="parameter" id="listTags-param-perPage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">perPage</span> = <span class="default-value">30</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Tag-class.html">Tag</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the tags of the specified repository.
+  
+
+</dd>
+
+        <dt id="listTeams" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listTeams.html">listTeams</a></span><span class="signature">(<wbr><span class="parameter" id="listTeams-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Team-class.html">Team</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the teams of the specified repository.
+  
+
+</dd>
+
+        <dt id="listUserRepositories" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/listUserRepositories.html">listUserRepositories</a></span><span class="signature">(<wbr><span class="parameter" id="listUserRepositories-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span>, {</span><span class="parameter" id="listUserRepositories-param-type"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">type</span> = <span class="default-value">&#39;owner&#39;</span>, </span><span class="parameter" id="listUserRepositories-param-sort"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sort</span> = <span class="default-value">&#39;full_name&#39;</span>, </span><span class="parameter" id="listUserRepositories-param-direction"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">direction</span> = <span class="default-value">&#39;asc&#39;</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/Repository-class.html">Repository</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Lists the repositories of the user specified by <code>user</code> in a streamed fashion.
+  
+
+</dd>
+
+        <dt id="merge" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/merge.html">merge</a></span><span class="signature">(<wbr><span class="parameter" id="merge-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="merge-param-merge"><span class="type-annotation"><a href="../github/CreateMerge-class.html">CreateMerge</a></span> <span class="parameter-name">merge</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/RepositoryCommit-class.html">RepositoryCommit</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Merges a branch in the specified repository.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pingHook" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/pingHook.html">pingHook</a></span><span class="signature">(<wbr><span class="parameter" id="pingHook-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="pingHook-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Pings the hook.
+  
+
+</dd>
+
+        <dt id="removeCollaborator" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/removeCollaborator.html">removeCollaborator</a></span><span class="signature">(<wbr><span class="parameter" id="removeCollaborator-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="removeCollaborator-param-user"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">user</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="testPushHook" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/testPushHook.html">testPushHook</a></span><span class="signature">(<wbr><span class="parameter" id="testPushHook-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="testPushHook-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Triggers a hook with the latest push.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateCommitComment" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/updateCommitComment.html">updateCommitComment</a></span><span class="signature">(<wbr><span class="parameter" id="updateCommitComment-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, {</span><span class="parameter" id="updateCommitComment-param-id"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span>, </span><span class="parameter" id="updateCommitComment-param-body"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">body</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CommitComment-class.html">CommitComment</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Update a commit comment
+  
+
+</dd>
+
+        <dt id="updateFile" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/updateFile.html">updateFile</a></span><span class="signature">(<wbr><span class="parameter" id="updateFile-param-slug"><span class="type-annotation"><a href="../github/RepositorySlug-class.html">RepositorySlug</a></span> <span class="parameter-name">slug</span>, </span><span class="parameter" id="updateFile-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span><span class="parameter" id="updateFile-param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="updateFile-param-content"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">content</span>, </span><span class="parameter" id="updateFile-param-sha"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sha</span>, {</span><span class="parameter" id="updateFile-param-branch"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">branch</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ContentCreation-class.html">ContentCreation</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Updates the specified file.
+  
+
+</dd>
+
+        <dt id="uploadReleaseAssets" class="callable">
+  <span class="name"><a href="../github/RepositoriesService/uploadReleaseAssets.html">uploadReleaseAssets</a></span><span class="signature">(<wbr><span class="parameter" id="uploadReleaseAssets-param-release"><span class="type-annotation"><a href="../github/Release-class.html">Release</a></span> <span class="parameter-name">release</span>, </span><span class="parameter" id="uploadReleaseAssets-param-createReleaseAssets"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/CreateReleaseAsset-class.html">CreateReleaseAsset</a></span>&gt;</span></span> <span class="parameter-name">createReleaseAssets</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../github/ReleaseAsset-class.html">ReleaseAsset</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">github_flutter</a></li>
+    <li><a href="../github">github</a></li>
+    <li class="self-crumb">RepositoriesService class</li>
+</ol>
+
+    <h5>github library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    github_flutter
+      0.0.1
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+
