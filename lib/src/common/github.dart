@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:github/src/common.dart';
+import 'package:github_flutter/src/common.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart' as http_parser;
 import 'package:meta/meta.dart';
@@ -84,10 +84,13 @@ class GitHub {
   /// Updated with every request.
   ///
   /// Will be `null` if no requests have been made yet.
-  DateTime? get rateLimitReset => _rateLimitReset == null
-      ? null
-      : DateTime.fromMillisecondsSinceEpoch(_rateLimitReset! * 1000,
-          isUtc: true);
+  DateTime? get rateLimitReset =>
+      _rateLimitReset == null
+          ? null
+          : DateTime.fromMillisecondsSinceEpoch(
+            _rateLimitReset! * 1000,
+            isUtc: true,
+          );
 
   int? _rateLimitReset, _rateLimitLimit, _rateLimitRemaining;
 
@@ -161,17 +164,16 @@ class GitHub {
     Map<String, String>? params,
     JSONConverter<S, T>? convert,
     String? preview,
-  }) =>
-      requestJson(
-        'GET',
-        path,
-        statusCode: statusCode,
-        fail: fail,
-        headers: headers,
-        params: params,
-        convert: convert,
-        preview: preview,
-      );
+  }) => requestJson(
+    'GET',
+    path,
+    statusCode: statusCode,
+    fail: fail,
+    headers: headers,
+    params: params,
+    convert: convert,
+    preview: preview,
+  );
 
   /// Handles Post Requests that respond with JSON
   ///
@@ -190,7 +192,7 @@ class GitHub {
   ///
   /// The future will pass the object returned from this function to the then method.
   /// The default [convert] function returns the input object.
-  /// [body] is the data to send to the server. Pass in a List<int> if you want to post binary body data. Everything else will have .toString() called on it and set as text content
+  /// [body] is the data to send to the server. Pass in a List&lt;int&gt; if you want to post binary body data. Everything else will have .toString() called on it and set as text content
   /// [S] represents the input type.
   /// [T] represents the type return from this function after conversion
   Future<T> postJSON<S, T>(
@@ -202,18 +204,17 @@ class GitHub {
     JSONConverter<S, T>? convert,
     dynamic body,
     String? preview,
-  }) =>
-      requestJson(
-        'POST',
-        path,
-        statusCode: statusCode,
-        fail: fail,
-        headers: headers,
-        params: params,
-        convert: convert,
-        body: body,
-        preview: preview,
-      );
+  }) => requestJson(
+    'POST',
+    path,
+    statusCode: statusCode,
+    fail: fail,
+    headers: headers,
+    params: params,
+    convert: convert,
+    body: body,
+    preview: preview,
+  );
 
   /// Handles PUT Requests that respond with JSON
   ///
@@ -232,7 +233,7 @@ class GitHub {
   ///
   /// The future will pass the object returned from this function to the then method.
   /// The default [convert] function returns the input object.
-  /// [body] is the data to send to the server. Pass in a List<int> if you want to post binary body data. Everything else will have .toString() called on it and set as text content
+  /// [body] is the data to send to the server. Pass in a List&lt;int&gt; if you want to post binary body data. Everything else will have .toString() called on it and set as text content
   /// [S] represents the input type.
   /// [T] represents the type return from this function after conversion
   Future<T> putJSON<S, T>(
@@ -244,18 +245,17 @@ class GitHub {
     JSONConverter<S, T>? convert,
     dynamic body,
     String? preview,
-  }) =>
-      requestJson(
-        'PUT',
-        path,
-        statusCode: statusCode,
-        fail: fail,
-        headers: headers,
-        params: params,
-        convert: convert,
-        body: body,
-        preview: preview,
-      );
+  }) => requestJson(
+    'PUT',
+    path,
+    statusCode: statusCode,
+    fail: fail,
+    headers: headers,
+    params: params,
+    convert: convert,
+    body: body,
+    preview: preview,
+  );
 
   /// Handles PATCH Requests that respond with JSON
   ///
@@ -274,7 +274,7 @@ class GitHub {
   ///
   /// The future will pass the object returned from this function to the then method.
   /// The default [convert] function returns the input object.
-  /// [body] is the data to send to the server. Pass in a List<int> if you want to post binary body data. Everything else will have .toString() called on it and set as text content
+  /// [body] is the data to send to the server. Pass in a List&lt;int&gt; if you want to post binary body data. Everything else will have .toString() called on it and set as text content
   /// [S] represents the input type.
   /// [T] represents the type return from this function after conversion
   Future<T> patchJSON<S, T>(
@@ -286,18 +286,17 @@ class GitHub {
     JSONConverter<S, T>? convert,
     dynamic body,
     String? preview,
-  }) =>
-      requestJson(
-        'PATCH',
-        path,
-        statusCode: statusCode,
-        fail: fail,
-        headers: headers,
-        params: params,
-        convert: convert,
-        body: body,
-        preview: preview,
-      );
+  }) => requestJson(
+    'PATCH',
+    path,
+    statusCode: statusCode,
+    fail: fail,
+    headers: headers,
+    params: params,
+    convert: convert,
+    body: body,
+    preview: preview,
+  );
 
   Future<T> requestJson<S, T>(
     String method,
@@ -343,7 +342,7 @@ class GitHub {
   /// [path] can either be a path like '/repos' or a full url.
   /// [headers] are HTTP Headers. If it doesn't exist, the 'Accept' and 'Authorization' headers are added.
   /// [params] are query string parameters.
-  /// [body] is the body content of requests that take content. Pass in a List<int> if you want to post binary body data. Everything else will have .toString() called on it and set as text content
+  /// [body] is the body content of requests that take content. Pass in a List&lt;int&gt; if you want to post binary body data. Everything else will have .toString() called on it and set as text content
   ///
   Future<http.Response> request(
     String method,
@@ -440,7 +439,7 @@ class GitHub {
             errors = List<Map<String, String>>.from(json['errors']);
           } catch (_) {
             errors = [
-              {'code': json['errors'].toString()}
+              {'code': json['errors'].toString()},
             ];
           }
         }

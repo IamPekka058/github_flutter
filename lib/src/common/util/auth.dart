@@ -17,30 +17,30 @@ class Authentication {
   // NEXT major version
   /// Creates an [Authentication] instance that uses the specified OAuth2 [token].
   const Authentication.withToken(this.token)
-      : username = null,
-        password = null,
-        bearerToken = null;
+    : username = null,
+      password = null,
+      bearerToken = null;
 
   /// Creates an [Authentication] instance that uses the specified
   /// [bearerToken].
   const Authentication.bearerToken(String this.bearerToken)
-      : username = null,
-        password = null,
-        token = null;
+    : username = null,
+      password = null,
+      token = null;
 
   /// Creates an [Authentication] instance that has no authentication.
   const Authentication.anonymous()
-      : token = null,
-        username = null,
-        password = null,
-        bearerToken = null;
+    : token = null,
+      username = null,
+      password = null,
+      bearerToken = null;
 
   // TODO: mark the `username` and `password` params as `String` to REQUIRE
   // non-null values. - NEXT major version
   /// Creates an [Authentication] instance that uses a username and password.
   const Authentication.basic(this.username, this.password)
-      : token = null,
-        bearerToken = null;
+    : token = null,
+      bearerToken = null;
 
   /// Anonymous Authentication Flag
   bool get isAnonymous => !isBasic && !isToken && !isBearer;

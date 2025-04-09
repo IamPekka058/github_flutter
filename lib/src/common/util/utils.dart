@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:github/src/common.dart';
+import 'package:github_flutter/src/common.dart';
 import 'package:meta/meta.dart';
 
 /// A Json encodable class that mimics an enum,
@@ -153,9 +153,10 @@ Map<K, V?> createNonNullMap<K, V>(Map<K, V> input, {bool recursive = true}) {
   final map = <K, V?>{};
   for (final entry in input.entries) {
     if (entry.value != null) {
-      map[entry.key] = recursive && entry.value is Map
-          ? createNonNullMap(entry.value as Map, recursive: recursive) as V?
-          : entry.value;
+      map[entry.key] =
+          recursive && entry.value is Map
+              ? createNonNullMap(entry.value as Map, recursive: recursive) as V?
+              : entry.value;
     }
   }
   return map;

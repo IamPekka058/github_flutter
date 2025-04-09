@@ -37,10 +37,13 @@ abstract class GenType implements Comparable<GenType> {
   }
 
   GenType mergeWith(GenType other, GenAbstractClass? superclass) {
-    assert(signature == other.signature,
-        'cannot merge types with different signatures');
+    assert(
+      signature == other.signature,
+      'cannot merge types with different signatures',
+    );
     throw StateError(
-        'not sure how to merge $runtimeType with ${other.runtimeType}');
+      'not sure how to merge $runtimeType with ${other.runtimeType}',
+    );
   }
 
   @override
@@ -75,10 +78,7 @@ class GenPrimitive extends GenType {
     if (other is GenPrimitive) {
       assert(type == other.type);
       if (comment != other.comment) {
-        return GenPrimitive(
-          type,
-          '$comment\n\n${other.comment}',
-        );
+        return GenPrimitive(type, '$comment\n\n${other.comment}');
       }
       return this;
     }
@@ -99,7 +99,8 @@ class GenUnion extends GenType {
     for (final subtype in subtypes) {
       if (subtype.comment.isNotEmpty) {
         result.writeln(
-            ' * [${subtype.name}]: ${subtype.comment.split('\n').first}');
+          ' * [${subtype.name}]: ${subtype.comment.split('\n').first}',
+        );
       } else {
         result.writeln(' * [${subtype.name}]');
       }
@@ -186,7 +187,7 @@ class GenList extends GenType {
 
 class GenAbstractClass extends GenType {
   GenAbstractClass(this.name, this.comment, {Map<String, GenType>? properties})
-      : properties = properties ?? <String, GenType>{};
+    : properties = properties ?? <String, GenType>{};
 
   @override
   final String name;
@@ -199,12 +200,15 @@ class GenAbstractClass extends GenType {
 
   @override
   String get signature {
-    var propertySignatures = properties.keys
-        .map<String>((String propertyName) =>
-            '$propertyName:${properties[propertyName]!.signature}')
-        .toList()
-      ..sort()
-      ..join(',');
+    var propertySignatures =
+        properties.keys
+            .map<String>(
+              (String propertyName) =>
+                  '$propertyName:${properties[propertyName]!.signature}',
+            )
+            .toList()
+          ..sort()
+          ..join(',');
     return 'abstract class $name { $propertySignatures }';
   }
 
@@ -294,11 +298,16 @@ class GenAbstractClass extends GenType {
           comment != other.comment ? '$comment\n\n${other.comment}' : comment;
       var newProperties = <String, GenType>{};
       for (final propertyName in properties.keys) {
-        newProperties[propertyName] = properties[propertyName]!
-            .mergeWith(other.properties[propertyName]!, null);
+        newProperties[propertyName] = properties[propertyName]!.mergeWith(
+          other.properties[propertyName]!,
+          null,
+        );
       }
-      var result =
-          GenAbstractClass(name, newComment, properties: newProperties);
+      var result = GenAbstractClass(
+        name,
+        newComment,
+        properties: newProperties,
+      );
       var subclassesA = subclasses..sort();
       var subclassesB = other.subclasses..sort();
       for (var index = 0; index < subclassesA.length; index += 1) {
@@ -330,12 +339,15 @@ class GenClass extends GenType {
 
   @override
   String get signature {
-    var propertySignatures = properties.keys
-        .map<String>((String propertyName) =>
-            '$propertyName:${properties[propertyName]!.signature}')
-        .toList()
-      ..sort()
-      ..join(',');
+    var propertySignatures =
+        properties.keys
+            .map<String>(
+              (String propertyName) =>
+                  '$propertyName:${properties[propertyName]!.signature}',
+            )
+            .toList()
+          ..sort()
+          ..join(',');
     return 'class $name extends { ${superclass?.signature} } with { $propertySignatures }';
   }
 
@@ -386,8 +398,9 @@ class GenClass extends GenType {
     if (!lastLineWasBlank) {
       output.writeln('');
     }
-    output
-        .writeln('  Map<String, dynamic> toJson() => _\$${name}ToJson(this);');
+    output.writeln(
+      '  Map<String, dynamic> toJson() => _\$${name}ToJson(this);',
+    );
     output.writeln('');
     output.writeln('  factory $name.fromJson(Map<String, dynamic> input) =>');
     output.writeln('      _\$${name}FromJson(input);');
@@ -414,8 +427,10 @@ class GenClass extends GenType {
           comment != other.comment ? '$comment\n\n${other.comment}' : comment;
       var newProperties = <String, GenType>{};
       for (final propertyName in properties.keys) {
-        newProperties[propertyName] = properties[propertyName]!
-            .mergeWith(other.properties[propertyName]!, null);
+        newProperties[propertyName] = properties[propertyName]!.mergeWith(
+          other.properties[propertyName]!,
+          null,
+        );
       }
       return GenClass(name, newComment, superclass, newProperties);
     }
@@ -469,8 +484,10 @@ String buildComment(Map<String, Object?> schema) {
     description.writeln(schema['format']);
   }
   if (schema['examples'] != null) {
-    assure(schema['examples'] is List<Object?>,
-        () => 'examples should be a list, not as in $schema');
+    assure(
+      schema['examples'] is List<Object?>,
+      () => 'examples should be a list, not as in $schema',
+    );
     for (final example in schema['examples'] as List<Object?>) {
       if (description.isNotEmpty) {
         description.writeln('');
@@ -506,11 +523,15 @@ GenType process(Map<String, Object?> schema, {String? defaultName}) {
     if (anyOf != null) {
       assure(comment.isEmpty, () => 'lost comment to anyOf/oneOf: $comment');
       assure(
-          anyOf is List<Object?>, () => 'anyOf/oneOf key is not a JSON list');
+        anyOf is List<Object?>,
+        () => 'anyOf/oneOf key is not a JSON list',
+      );
       var subtypes = <GenType>[];
       for (final subtype in anyOf as List<Object?>) {
-        assure(subtype is Map<String, Object?>,
-            () => 'type in anyOf/oneOf is not a JSON object');
+        assure(
+          subtype is Map<String, Object?>,
+          () => 'type in anyOf/oneOf is not a JSON object',
+        );
         subtypes.add(process(subtype as Map<String, Object?>));
       }
       if (subtypes.length == 2) {
@@ -533,8 +554,10 @@ GenType process(Map<String, Object?> schema, {String? defaultName}) {
     exit(1);
   }
   if (type == 'array') {
-    assure(schema['items'] is Map<String, Object?>,
-        () => 'array items are not a JSON object');
+    assure(
+      schema['items'] is Map<String, Object?>,
+      () => 'array items are not a JSON object',
+    );
     return GenList(process(schema['items'] as Map<String, Object?>), comment);
   }
   if (type == 'object') {
@@ -546,10 +569,14 @@ GenType process(Map<String, Object?> schema, {String? defaultName}) {
         comment,
       );
       for (final subschema in anyOf as List<Object?>) {
-        assure(subschema is Map<String, Object?>,
-            () => 'anyOf value is not a JSON object');
-        var subclass = processObject(subschema as Map<String, Object?>,
-            superclass: result);
+        assure(
+          subschema is Map<String, Object?>,
+          () => 'anyOf value is not a JSON object',
+        );
+        var subclass = processObject(
+          subschema as Map<String, Object?>,
+          superclass: result,
+        );
         assert(result.subclasses.last == subclass);
       }
       return result;
@@ -572,21 +599,30 @@ GenType process(Map<String, Object?> schema, {String? defaultName}) {
   exit(1);
 }
 
-GenClass processObject(Map<String, Object?> schema,
-    {GenAbstractClass? superclass, String? comment, String? defaultName}) {
+GenClass processObject(
+  Map<String, Object?> schema, {
+  GenAbstractClass? superclass,
+  String? comment,
+  String? defaultName,
+}) {
   assert(schema['anyOf'] == null);
   comment ??= buildComment(schema);
   var properties = <String, GenType>{};
   var propertiesData = schema['properties'];
-  assure(propertiesData is Map<String, Object?>,
-      () => 'properties key is not a JSON map');
+  assure(
+    propertiesData is Map<String, Object?>,
+    () => 'properties key is not a JSON map',
+  );
   for (final propertyName in (propertiesData as Map<String, Object?>).keys) {
     var propertyData = propertiesData[propertyName];
-    assure(propertyData is Map<String, Object?>,
-        () => 'property $propertyName is not a JSON object');
+    assure(
+      propertyData is Map<String, Object?>,
+      () => 'property $propertyName is not a JSON object',
+    );
     properties[camelCase(propertyName)!] = process(
-        propertyData as Map<String, Object?>,
-        defaultName: camelCase(propertyName, uppercase: true));
+      propertyData as Map<String, Object?>,
+      defaultName: camelCase(propertyName, uppercase: true),
+    );
   }
   return GenClass(
     camelCase(schema['title'] as String?) ?? defaultName ?? '##unnamed##',
@@ -599,7 +635,8 @@ GenClass processObject(Map<String, Object?> schema,
 void main(List<String> arguments) {
   if (arguments.length != 1) {
     print(
-        'Command must be run with one argument, the file name of the schema to process.');
+      'Command must be run with one argument, the file name of the schema to process.',
+    );
     exit(1);
   }
   Object schema = json.decode(File(arguments.single).readAsStringSync());

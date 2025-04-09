@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:github/src/common.dart';
+
+import 'package:github_flutter/src/common.dart';
 import 'package:http/http.dart' as http;
 
 /// OAuth2 Flow Helper
@@ -37,14 +38,16 @@ class OAuth2Flow {
 
   GitHub? github;
 
-  OAuth2Flow(this.clientId, this.clientSecret,
-      {String? redirectUri,
-      this.scopes = const [],
-      this.state,
-      this.github,
-      this.baseUrl = 'https://github.com/login/oauth'})
-      : redirectUri =
-            redirectUri == null ? null : _checkRedirectUri(redirectUri);
+  OAuth2Flow(
+    this.clientId,
+    this.clientSecret, {
+    String? redirectUri,
+    this.scopes = const [],
+    this.state,
+    this.github,
+    this.baseUrl = 'https://github.com/login/oauth',
+  }) : redirectUri =
+           redirectUri == null ? null : _checkRedirectUri(redirectUri);
 
   static String _checkRedirectUri(String uri) {
     return uri.contains('?') ? uri.substring(0, uri.indexOf('?')) : uri;
@@ -54,19 +57,14 @@ class OAuth2Flow {
   ///
   /// This should be displayed to the user.
   String createAuthorizeUrl() {
-    return '$baseUrl/authorize${buildQueryString({
-          'client_id': clientId,
-          'scope': scopes.join(','),
-          'redirect_uri': redirectUri,
-          'state': state
-        })}';
+    return '$baseUrl/authorize${buildQueryString({'client_id': clientId, 'scope': scopes.join(','), 'redirect_uri': redirectUri, 'state': state})}';
   }
 
   /// Exchanges the given [code] for a token.
   Future<ExchangeResponse> exchange(String code, [String? origin]) {
     final headers = <String, String>{
       'Accept': 'application/json',
-      'content-type': 'application/json'
+      'content-type': 'application/json',
     };
 
     if (origin != null) {
@@ -77,19 +75,22 @@ class OAuth2Flow {
       'client_id': clientId,
       'client_secret': clientSecret,
       'code': code,
-      'redirect_uri': redirectUri
+      'redirect_uri': redirectUri,
     });
 
     return (github == null ? http.Client() : github!.client)
         .post(Uri.parse('$baseUrl/access_token'), body: body, headers: headers)
         .then((response) {
-      final json = jsonDecode(response.body) as Map<String, dynamic>;
-      if (json['error'] != null) {
-        throw Exception(json['error']);
-      }
-      return ExchangeResponse(json['access_token'], json['token_type'],
-          (json['scope'] as String).split(','));
-    });
+          final json = jsonDecode(response.body) as Map<String, dynamic>;
+          if (json['error'] != null) {
+            throw Exception(json['error']);
+          }
+          return ExchangeResponse(
+            json['access_token'],
+            json['token_type'],
+            (json['scope'] as String).split(','),
+          );
+        });
   }
 }
 
